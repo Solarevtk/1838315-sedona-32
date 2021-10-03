@@ -1,5 +1,5 @@
 @font-face {
-    font-family:"PT Sans";
+    font-family:"PT Sans",sans-serif;
     font-style: normal;
     font-weight: 400;
 
@@ -45,44 +45,44 @@ body {
         background-color: #756257;
         text-decoration: none;
         text-transform: uppercase;
+        border-radius: 4px;
 }
 .main-index {
-    background-image: url("images/index-background.jpg") ;
+    background-image: url("../images/index-background.jpg");
+    width: 1200px;
+    height: 485px;
+    left: 40px;
+    top: 65px;
     background-size: 100% auto;
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
   }
 .mailing {
-    background-image: url("C:\Users\79204\Documents\GitHub\1838315-sedona-32\images\collback.png");
+    background-image: url("../images/background.jpg");
     background-size: 100% auto;
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 .block {
-    
     background-color: #83B3D3;
-    position: absolute;
     color:#ffffff;
     text-align: center;
 }
 .food{
     background-color: #83B3D3;
-    position: absolute;
     color:#ffffff;
     text-align: center;
 }
 .hotels{
-    background-color: #83B3D31F;
-    position: absolute;
     color:#ffffff;
     text-align: center;
+    background: rgba(131, 179, 211, 0.12);
 }
 .souvenirs{
     background-color: #83B3D3;
-    position: absolute;
     color:#ffffff;
     text-align: center;
 }
 .telefon {
-    font-family: PT Sans;
+    font-family: "PT Sans",sans-serif,sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
@@ -91,4 +91,231 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color:black;
+}
+.main-inner {
+    background: url(../images/catalog-background.jpg);
+    background-repeat: no-repeat;
+}
+.select-control {
+    color:#333333;
+}
+.button-repeat {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    border: none;
+    color:#ffffff;
+    background-color:none;
+    background-color:#ffffff;
+}
+.button-use {
+    font-family: "PT Sans",sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20,7px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    background: #83B3D3;
+    border-radius: 4px;
+    color:#ffffff;
+    border:none;
+}
+.inner-header-title {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 78px;
+}
+.catalog-filter-title {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    
+}
+.catalog-filter-group {
+    border:none;
+}
+.mode-title {
+    border: 2px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 16px;
+}
+.mode-title-black {
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 16px;
+}
+.product-card-title {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+}
+.product-card-price {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color:#333333;
+}
+.reiting {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #F2F2F2;
+    border-radius: 4px;
+    color:#333333;
+    width: 160px;
+    height: 37px;
+    
+}
+.white-block {
+    background-color:#ffffff;
+    width: 1200px;
+    height: 282px;
+    left: 40px;
+    top: 550px;
+}
+.h2-block {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color:black;
+}
+.food {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color:#ffffff;
+}
+.№ {
+    color:#333333;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* or 117% */
+    
+    text-align: center;
+    text-transform: uppercase;
+}
+.№-white {
+    font-family: inherit;
+    color:#ffffff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+.souvenirs {
+    background: rgba(131, 179, 211, 0.12);
+}
+.block-road {
+    background: rgba(131, 179, 211, 0.2);
+}
+.blue-block {
+    background: rgba(131, 179, 211, 0.12); 
+}
+.sedona-hotels-block {
+    text-align:center;
+}
+.sedona-hotels-block-p {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    /* or 118% */
+    color:#333333;
+    text-align: center;
+}
+.searchhotels {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    /* or 180% */
+    
+    text-align: center;
+    text-decoration:none;
+    text-transform: uppercase;
+    
+    /* basic/white */
+    
+    color: #FFFFFF;
+    background: #756257;
+    border-radius: 10px;
+}
+.mailing-h1 {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    /* or 120% */
+    color:#FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+}
+.mailing-p {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    /* or 118% */
+    color:#FFFFFF;
+    text-align: center;
+    /* basic/white */
+    color: #FFFFFF;
+}
+.mail-button {
+    background: #F2F2F2;
+    border-radius: 0px 10px 10px 0px;
+    border:none;
+    color:#F2F2F2;
+}
+.for-email-button {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    /* or 130% */
+    color:#FFFFFF;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    background: #83B3D3;
+    border-radius: 0px 10px 10px 0px;
+}
+.page-footer {
+    text-align: bottom;
 }
