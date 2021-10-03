@@ -6,7 +6,7 @@
     src: url("fonts/pt-sans-regular.woff2") format("woff2");
     font-display: swap;
 }
-.main-logo-div {
+.page-logo-div {
     text-align: center;
 }
 body {
@@ -27,7 +27,7 @@ body {
 }
 .navigation-link {
     font-size:20px;
-    line-height:25,88px;
+    line-height:26px;
     font-weight: 700;
     text-align: center;
     color: #000000;
@@ -47,7 +47,7 @@ body {
         text-transform: uppercase;
         border-radius: 4px;
 }
-.main-index {
+.page-index {
     background-image: url("../images/index-background.jpg");
     width: 1200px;
     height: 485px;
@@ -57,7 +57,7 @@ body {
     background-repeat: no-repeat;
   }
 .mailing {
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background-mailing.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
@@ -171,7 +171,7 @@ body {
     line-height: 23px;
     color:#333333;
 }
-.reiting {
+.rating {
     font-family: inherit;
     font-style: normal;
     font-weight: normal;
@@ -213,7 +213,7 @@ body {
     text-transform: uppercase;
     background-color:#ffffff;
 }
-.№ {
+.number {
     color:#333333;
     font-family: inherit;
     font-style: normal;
@@ -225,7 +225,7 @@ body {
     text-align: center;
     text-transform: uppercase;
 }
-.№-white {
+.number-white {
     font-family: inherit;
     color:#ffffff;
     font-style: normal;
