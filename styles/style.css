@@ -56,10 +56,15 @@ body {
     background-size: 100% auto;
     background-repeat: no-repeat;
   }
-.mailing {
+.mailing-index {
     background-image: url("../images/background-mailing.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
+    text-align: center;
+}
+.mailing {
+    text-align:center;
+    margin-bottom:50px;
 }
 .block {
     background-color: #83B3D3;
@@ -81,17 +86,7 @@ body {
     color:#ffffff;
     text-align: center;
 }
-.telefon {
-    font-family: "PT Sans",sans-serif,sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    color:black;
-}
+
 .main-inner {
     background: url(../images/catalog-background.jpg);
     background-repeat: no-repeat;
@@ -316,9 +311,83 @@ body {
     background: #83B3D3;
     border-radius: 0px 10px 10px 0px;
 }
+
+.product-card-button {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#FFFFFF;
+    padding-top:9px;
+    padding-bottom:10px;
+    padding-left:15%;
+}
+.block-product-card {
+    width: 151px;
+    height: 37px;
+    background: #756257;
+    border-radius: 4px;
+}
+.product-card-button-blue {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#FFFFFF;
+    padding-top:9px;
+    padding-bottom:10px;
+    padding-left:15%;
+    
+}
+.button-blue {
+    width: 160px;
+    height: 37px;
+    background: #83B3D3;
+    border-radius: 4px;
+}
+.button-green {
+    width: 160px;
+    height: 37px;
+    background: #7DB54F;
+    border-radius: 4px;
+}
+.title-block {
+    margin-top:44px;
+    margin-bottom:42px;
+}
+.mode-title {
+    margin:8px;
+}
 .page-footer {
     text-align: bottom;
 }
-.footer-catalog {
+.telefon {
+    font-family: "PT Sans",sans-serif,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:black;
+}
+.telefon-block {
     text-align:center;
+}
+.social-footer {
+    margin-left: 50px;
+    margin-bottom: -36px;
+}
+.htmlacademy-block {
+    text-align:right;
+    margin-right: 50px;
+    margin-top: -27px;
 }
