@@ -233,44 +233,53 @@
           <p class="rating">Рейтинг: 9,2</p>
         </div>
       
-        <ul class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-link pagination-prev pagination-disabled">
-              <span class="visually-hidden">Предыдущая страница</span>
-            </a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link pagination-current">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">4</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link pagination-next" href="#">
-              <span class="visually-hidden">Следующая страница</span>
-            </a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">10</a>
-          </li>
-        </ul>
-
         <div class="link-more-div">
           <a class="link-more" href="#">Загрузить еще</a>
         </div>
+      </div>
+        <ul class="pagination">
+          <li class="pagination-item">
+            <div class="pagination-link-block-gray">
+            <a class="pagination-current-gray">1</a>
+            </div>
+          </li>
+          <li class="pagination-item">
+            <div class="pagination-link-block">
+            <a class="pagination-link" href="#">2</a>
+            </div>
+          </li>
+          <li class="pagination-item">
+            <div class="pagination-link-block">
+            <a class="pagination-link" href="#">3</a>
+            </div>
+          </li>
+          <li class="pagination-item">
+            <div class="pagination-link-block">
+            <a class="pagination-link" href="#">4</a>
+            </div>
+          </li>
+          <li class="pagination-item">
+            <div class="pagination-link-block">
+            <a class="pagination-link pagination-next" href="#">...
+            </a>
+            </div>
+            
+          </li>
+          <li class="pagination-item">
+            <div class="pagination-link-block">
+            <a class="pagination-link" href="#">10</a>
+          </div>
+          </li>
+        </ul>
 
-        <P>Гостиниц на странице:</P>
+        
+
+        <P class="text-sorting">Гостиниц на странице:</P>
         <select class="select-control" id="sorting-hotels" name="sorting">
-          <option value="4">4</option>
-          <option value="3">3</option>
-          <option value="2">2</option>
-          <option value="1">1</option>
+          <option class="option-control" value="4">4</option>
+          <option class="option-control" value="3">3</option>
+          <option class="option-control" value="2">2</option>
+          <option class="option-control" value="1">1</option>
         </select>
       </section>
 
