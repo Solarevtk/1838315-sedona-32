@@ -6,8 +6,28 @@
     src: url("fonts/pt-sans-regular.woff2") format("woff2");
     font-display: swap;
 }
-.page-logo-div {
-    text-align: center;
+html {
+    height: 100%;
+  }
+body{
+
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}  
+.main-container {
+    flex-grow: 1;
+}
+.page-container {
+    width:1200px;
+    margin: 0 auto;
+    display:flex;
+    flex-wrap:wrap;
+}
+.main-logo {
+    display: block;
+    margin: 0 auto;
 }
 body {
     font-family: "PT Sans", sans-serif;
@@ -17,7 +37,10 @@ body {
 .logo-h1 {
     font-size:30px;
     line-height:36px;
+    margin:0;
+    padding:0;
     text-align: center;
+
 }
 .p-logo {
     color: #333333;
@@ -25,11 +48,24 @@ body {
     line-height:36px;
     text-align: center;
 }
+.navigation {
+    display:flex;
+    width:1200px;
+    margin:0 auto;
+}
+.navigation-list {
+    width:500px;
+    margin:0;
+    padding:0;
+}
+.navigation-user {
+    max-width:250px;
+    margin-left:auto;
+}
 .navigation-link {
     font-size:20px;
     line-height:26px;
     font-weight: 700;
-    text-align: center;
     color: #000000;
     background-color:#ffffff ;
     text-decoration: none;
@@ -40,7 +76,6 @@ body {
         font-size: 16px;
         line-height: 16px;
         font-weight: 700;
-        text-align: center;
         color: #ffffff;
         background-color: #756257;
         text-decoration: none;
@@ -70,6 +105,9 @@ body {
     background-color: #83B3D3;
     color:#ffffff;
     text-align: center;
+    margin: 0;
+    padding: 0;
+
 }
 .food{
     background-color: #83B3D3;
@@ -187,6 +225,13 @@ body {
     height: 282px;
     left: 40px;
     top: 550px;
+    margin: 0;
+    padding: 0;
+}
+.logo-block {
+    margin: 0 auto;
+    width:720px;
+    padding:63px 240px 139px;
 }
 .h2-block {
     font-family: inherit;
@@ -236,9 +281,11 @@ body {
 }
 .blue-block {
     background: rgba(131, 179, 211, 0.12); 
+    margin: 0;
+    padding: 0;
 }
 .sedona-hotels-block {
-    text-align:center;
+    text-align: center;
 }
 .sedona-hotels-block-p {
     font-family: inherit;
@@ -250,23 +297,32 @@ body {
     color:#333333;
     text-align: center;
 }
+.sedona-hotels-block-h2 {
+    
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+}
 .searchhotels {
     font-family: inherit;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
-    line-height: 36px;
-    /* or 180% */
-    
-    text-align: center;
+    line-height: 60px;
     text-decoration:none;
-    text-transform: uppercase;
-    
-    /* basic/white */
-    
+    color:#FFFFFF;
+}
+.searchhotels-block {
     color: #FFFFFF;
     background: #756257;
     border-radius: 10px;
+    width: 575px;
+    height: 60px;
+    margin:0 auto;
 }
 .mailing-h1 {
     font-family: inherit;
@@ -292,26 +348,45 @@ body {
     color: #FFFFFF;
 }
 .mail-button {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    opacity: 0.6;
+    margin-left:200px;
     background: #F2F2F2;
-    border-radius: 0px 10px 10px 0px;
     border:none;
-    color:#F2F2F2;
+    width: 600px;
+    height: 60px;
+    border-radius: 10px 0px  0px 10px;
 }
+
 .for-email-button {
     font-family: inherit;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
-    line-height: 26px;
+    line-height: 60px;
     /* or 130% */
     color:#FFFFFF;
     align-items: center;
-    text-align: center;
     text-transform: uppercase;
+    
+}
+.for-email-button-block {
+    width: 200px;
+    height: 62px;
     background: #83B3D3;
     border-radius: 0px 10px 10px 0px;
 }
-
+.mail_block{
+    display:flex;
+    margin-left:-100px;
+}
 .product-card-button {
     font-family: inherit;
     font-style: normal;
@@ -366,8 +441,18 @@ body {
 .mode-title {
     margin:8px;
 }
-.page-footer {
-    text-align: bottom;
+.footer-container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+.social-block {
+    width:300px;
+    margin-right:60px;
+}
+.htmlacademy-block {
+    margin-left:auto;
+    
 }
 .telefon {
     font-family: "PT Sans",sans-serif,sans-serif;
@@ -382,10 +467,7 @@ body {
 .telefon-block {
     text-align:center;
 }
-.social-footer {
-    margin-left: 50px;
-    margin-bottom: -36px;
-}
+
 .htmlacademy-block {
     text-align:right;
     margin-right: 50px;
@@ -470,4 +552,19 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color:#FFFFFF;
+}
+.block {
+    width:400px;
+    height: 384px;
+    margin:0;
+    padding:0;
+}
+.block {
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+}
+.photo-center-city {
+    width: 800px;
+    height: 384px;
 }
