@@ -17,7 +17,7 @@ body{
     min-height: 100%;
 }  
 .main-container {
-    flex-grow: 1;
+    flex-grow: 1;   
 }
 .page-container {
     width:1200px;
@@ -85,7 +85,7 @@ body {
 .page-index {
     background-image: url("../images/index-background.jpg");
     width: 1200px;
-    height: 485px;
+    
     left: 40px;
     top: 65px;
     background-size: 100% auto;
@@ -135,29 +135,56 @@ body {
 .button-repeat {
     font-family: inherit;
     font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 23px;
-    text-align: center;
-    border: none;
+    font-size: 16px;
+    background: none;
     color:#ffffff;
-    background-color:none;
-    background-color:#ffffff;
+    border:none;
+    margin-left:25px;
+    margin-top:10px;
+}
+.button-repeat-block {
+    margin-top:10px;
+}
+.button-catalog{
+    display:flex;
+    flex-direction: column;
+    margin:0 auto;
+    margin-right:160px;
 }
 .button-use {
-    font-family: "PT Sans",sans-serif;
+    font-family: inherit;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
-    line-height: 20,7px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
-    background: #83B3D3;
-    border-radius: 4px;
+    background: none;
     color:#ffffff;
     border:none;
+    margin-left:25px;
+    margin-top:10px;
+}
+.button-use-block {
+    background: #83B3D3;
+    border-radius: 4px;
+    width: 160px;
+    height: 48px;
+    margin:0 auto;
+}
+.sorting-block {
+    display:flex;
+    margin-top:27px;
+}
+
+.select-control {
+    width: 141px;
+    height: 23px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #333333;
+    border:none;
+    margin-top:39px;
 }
 .inner-header-title {
     font-family: inherit;
@@ -165,6 +192,9 @@ body {
     font-weight: bold;
     font-size: 60px;
     line-height: 78px;
+    color: #FFFFFF;
+    
+    margin:0 auto;
 }
 .catalog-filter-title {
     font-family: inherit;
@@ -172,7 +202,43 @@ body {
     font-weight: bold;
     font-size: 20px;
     line-height: 26px;
-    
+    color:#FFFFFF;
+    width: 150px;
+    height: 26px;
+}
+.control-label {
+    width: 63px;
+    height: 23px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.catalog-filter-title_type {
+    height: 26px; 
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+.catalog-rilter-input_from-to {
+    width: 20px;
+    height: 23px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: right;
+    color: #FFFFFF;
+    opacity: 0.3;
+}
+.catalog-filter-list {
+    list-style: none;
 }
 .catalog-filter-group {
     border:none;
@@ -434,10 +500,6 @@ body {
     background: #7DB54F;
     border-radius: 4px;
 }
-.title-block {
-    margin-top:44px;
-    margin-bottom:42px;
-}
 .mode-title {
     margin:8px;
 }
@@ -466,12 +528,6 @@ body {
 }
 .telefon-block {
     text-align:center;
-}
-
-.htmlacademy-block {
-    text-align:right;
-    margin-right: 50px;
-    margin-top: -27px;
 }
 .text-sorting {
     font-family: inherit;
@@ -532,7 +588,8 @@ body {
     height: 55px;
 }
 .link-more-div {
-    
+    margin-top:31px;
+    margin-left:288px;
     width: 625px;
     height: 55px;
     background-color: #83B3D3;
@@ -547,8 +604,7 @@ body {
     font-size: 20px;
     line-height: 26px;
     display: flex;
-    align-items: center;
-    text-align: center;
+
     text-transform: uppercase;
     text-decoration: none;
     color:#FFFFFF;
@@ -567,4 +623,47 @@ body {
 .photo-center-city {
     width: 800px;
     height: 384px;
+}
+.main-page-block{
+    display:flex;
+    justify-content: space-around;
+    align-content:column;
+}
+.breadcrumbs {
+    display:flex;
+    flex-direction:row;
+    
+    
+}
+.breadcrumbs-link {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    width: 73px;
+    height: 21px;
+    margin-left:10px;
+}
+.product-card {
+    display:flex;
+}
+.product-card-block {
+border-top: 1px solid #E6E6E6;
+border-bottom: 1px solid #E6E6E6;
+margin:0 auto;
+}
+.sorting-footer-block {
+    display:flex;   
+}
+.pagination-link_flex {
+    display:flex;
+    align-items: baseline;
+}
+.line-dowland_more {
+    width: 1056px;
+    margin-top:30px;
+    border: 1px solid #E6E6E6;
+  
 }

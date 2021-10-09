@@ -37,27 +37,35 @@
       </nav>
     </header>
     <main class="main-inner">
+      <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
-        <header class="inner-header">
-          <ul class="breadcrumbs">
+        
+          <ul class="breadcrumbs catalog-filter-list">
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link" href="index.html">
+              <a class="breadcrumbs-link_svg" href="index.html">
                 <img class="main-inner-svg" src="images/main-navigation.svg" alt="Главная">
               </a>
             </li>
+            <ul class="breadcrumbs catalog-filter-list">
+              <li class="breadcrumbs-item">
+                  <img class="main-inner-svg" src="images/nav-link.svg" alt="Главная">
+              </li>
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ul>
         </header>
       </header>
+      
       <section class="catalog-products">
+        
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-
+          <div class="main-page-block">
           <fieldset class="catalog-filter-group">
             
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <label class="control">
+              <ul class="catalog-filter-list">
             <li>
               <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked>
               <span class="control-mark"></span>
@@ -73,12 +81,12 @@
               <span class="control-mark"></span>
               <span class="control-label">Wi-Fi</span>
             </li>
-
+          </ul>
             </label>
           </fieldset>
 
           <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Тип жилья:</legend>
+            <legend class="catalog-filter-title_type">Тип жилья:</legend>
 
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
@@ -118,24 +126,28 @@
 
             
             <label class="catalog-filter-label">
-               <input class="catalog-filter-input" type="number" name="min-price"> от
+               <input class="catalog-filter-input" type="number" name="min-price"> <div class="catalog-rilter-input_from-to">от</div>
             </label>
 
             <label class="catalog-filter-label">
-                <input class="catalog-filter-input" type="number" name="max-price"> до
+                <input class="catalog-filter-input" type="number" name="max-price"> <div class="catalog-rilter-input_from-to">до</div>
             </label>
 
           </fieldset>
-          
+           <div class="button-catalog">
+          <div class="button-use-block">
           <button class="button-use" type="submit">Применить</button>
-          
+        </div>
+        <div class="button-repeat-block">
           <button class="button-repeat" type="reset">Сбросить</button>
-
-        </form>
+        </div>
+      </div>
+    </div>
+    </form>
         
         <form class="sorting-type">
+          <div class="sorting-block">
           <h2>Найдено гостиниц: 38</h2>
-          <label class="visually-hidden" for="sorting">Сортировка</label>
           <select class="select-control" id="sorting" name="sorting">
             <option value="cheap">Сначала дешёвое</option>
             <option value="popular">Сначала популярное</option>
@@ -158,11 +170,14 @@
           <img src="images/mode-list.svg" alt="Показать список">
         </a>
       </div>
+    </div>
+    <div class="product-card-block">
         <div class="product-card">
-          <h3 class="product-card-title">Amara Resort & Spa</h3>
+          
           <a class="product-card-link" href="product.html">
             <img class="product-card-image" src="images/AmaraResort&Spa-img.png" alt="Фотография Гостиницы">
           </a>
+          <h3 class="product-card-title">Amara Resort & Spa</h3>
           <p class="product-card-price">Гостиница</p>
           <p class="product-card-price">От 4000 ₽</p>
           <div class="block-product-card">
@@ -179,10 +194,11 @@
         </div>
 
         <div class="product-card">
-          <h3 class="product-card-title">Desert Quail Inn</h3>
+          
           <a class="product-card-link" href="product.html">
             <img class="product-card-image" src="images/DesertQuailInn-image.png" alt="Фотография Гостиницы">
           </a>
+          <h3 class="product-card-title">Desert Quail Inn</h3>
           <p class="product-card-price">Мотель</p>
           <p class="product-card-price">От 3000 ₽</p>
           <div class="block-product-card">
@@ -198,10 +214,11 @@
         </div>
 
         <div class="product-card">
-          <h3 class="product-card-title">Villas at Poco Diablo</h3>
+          
           <a class="product-card-link" href="product.html">
             <img class="product-card-image" src="images/Villas at Poco Diablo-image.png" alt="Фотография Гостиницы">
           </a>
+          <h3 class="product-card-title">Villas at Poco Diablo</h3>
           <p class="product-card-price">Апартаменты</p>
           <p class="product-card-price">От 2000 ₽</p>
           <div class="block-product-card">
@@ -216,10 +233,11 @@
         </div>
 
         <div class="product-card">
-          <h3 class="product-card-title">GreenTree Inn</h3>
+          
           <a class="product-card-link" href="product.html">
             <img class="product-card-image" src="images/GreenTree Inn-image.png" alt="Фотография Гостиницыы">
           </a>
+          <h3 class="product-card-title">GreenTree Inn</h3>
           <p class="product-card-price">Гостиница</p>
           <p class="product-card-price">От 3000 ₽</p>
           <div class="block-product-card">
@@ -232,44 +250,41 @@
           <img src="images/star.svg" alt="2 звезды">
           <p class="rating">Рейтинг: 9,2</p>
         </div>
+      </div>
       
         <div class="link-more-div">
           <a class="link-more" href="#">Загрузить еще</a>
         </div>
-        <ul class="pagination">
-          <li class="pagination-item">
+        <div class="line-dowland_more">
+        </div>
+        <div class="sorting-footer-block"> 
+        <div class="pagination-link_flex">
+          
             <div class="pagination-link-block-gray">
             <a class="pagination-current-gray">1</a>
             </div>
-          </li>
-          <li class="pagination-item">
+        
             <div class="pagination-link-block">
             <a class="pagination-link" href="#">2</a>
             </div>
-          </li>
-          <li class="pagination-item">
+          
+        
             <div class="pagination-link-block">
             <a class="pagination-link" href="#">3</a>
             </div>
-          </li>
-          <li class="pagination-item">
+        
             <div class="pagination-link-block">
             <a class="pagination-link" href="#">4</a>
-            </div>
-          </li>
-          <li class="pagination-item">
+          </div>
+         
             <div class="pagination-link-block">
             <a class="pagination-link pagination-next" href="#">...
             </a>
             </div>
-            
-          </li>
-          <li class="pagination-item">
+          
             <div class="pagination-link-block">
             <a class="pagination-link" href="#">10</a>
           </div>
-          </li>
-        </ul>
 
         
 
@@ -280,8 +295,9 @@
           <option class="option-control" value="2">2</option>
           <option class="option-control" value="1">1</option>
         </select>
+        </div>
       </section>
-
+    </div>
       <div class="mailing">
         <h1>Подпишитесь на рассылку</h1>
         <p>Только полезная информация и никакого спама,
@@ -289,21 +305,20 @@
           <input  placeholder="Ваш e-mail" id="email-button">
           <label for="email-button">Подписаться</label>
       </div>
-
     </main>
     <footer class="page-footer">
-        <div class="social-footer">
+      <div class="footer-container">
+        <div class="social-block">
         <img src="images/twitter.svg" alt="telegram сайта">
                
         <img src="images/social-facebook.svg" alt="facebook сайта">
        
         <img src="images/social-youtube.svg" alt="YouTube сайта">
       </div>
-      <div class="telefon-block">
         <a class="telefon" href="+7 (812) 812-12-12">+7 (812) 812-12-12</a>
-      </div>
-      <div class="htmlacademy-block">
+        <div class="htmlacademy-block">
         <img src="images/htmlacademy.svg" alt="htmlacademt сайт">
+      </div>
       </div>
   </footer>
   </body>
