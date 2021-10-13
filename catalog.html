@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона(Каталог)</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -19,6 +21,9 @@
             <a class="navigation-link" href="hotels.html">Частые Гостинцы</a>
           </li>
         </ul>
+        <div>
+          <img class="logo-nav" src="images/sedona-nav.png" alt="лоотип в навигации">
+        </div>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
@@ -48,7 +53,7 @@
             </li>
             <ul class="breadcrumbs catalog-filter-list">
               <li class="breadcrumbs-item">
-                  <img class="main-inner-svg" src="images/nav-link.svg" alt="Главная">
+                  <img class="main-inner_svg" src="images/nav-link.svg" alt="Главная">
               </li>
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link">Гостиницы</a>
@@ -147,15 +152,15 @@
         
         <form class="sorting-type">
           <div class="sorting-block">
-          <h2>Найдено гостиниц: 38</h2>
+          <h2 class="h2_sirting-block">Найдено гостиниц: 38</h2>
           <select class="select-control" id="sorting" name="sorting">
             <option value="cheap">Сначала дешёвое</option>
             <option value="popular">Сначала популярное</option>
             <option value="expensive">Сначала дорогое</option>
           </select>
+        
           
-        </form>
-        <div class="title-block"></div>
+       <div class="mode-title-block">
         <a class="mode-title" href="#" >
           <img   src="images/mode-tile.svg" alt="Показать карточки">
         </a>
@@ -171,6 +176,9 @@
         </a>
       </div>
     </div>
+  </div>
+</form>
+<div class="decoration-line"></div>
     <div class="product-card-block">
         <div class="product-card">
           
@@ -251,14 +259,14 @@
           <p class="rating">Рейтинг: 9,2</p>
         </div>
       </div>
-      
+      <div class="decoration-line"></div>
         <div class="link-more-div">
           <a class="link-more" href="#">Загрузить еще</a>
         </div>
-        <div class="line-dowland_more">
-        </div>
+        <div class="decoration-line"></div>
+      
         <div class="sorting-footer-block"> 
-        <div class="pagination-link_flex">
+          <div class="pagination-link_flex">
           
             <div class="pagination-link-block-gray">
             <a class="pagination-current-gray">1</a>
@@ -280,14 +288,13 @@
             <div class="pagination-link-block">
             <a class="pagination-link pagination-next" href="#">...
             </a>
-            </div>
-          
-            <div class="pagination-link-block">
-            <a class="pagination-link" href="#">10</a>
           </div>
+          
+          <div class="pagination-link-block">
+          <a class="pagination-link" href="#">10</a>
+        </div>
 
-        
-
+        <div class="text-sorting-block">
         <P class="text-sorting">Гостиниц на странице:</P>
         <select class="select-control" id="sorting-hotels" name="sorting">
           <option class="option-control" value="4">4</option>
@@ -295,31 +302,41 @@
           <option class="option-control" value="2">2</option>
           <option class="option-control" value="1">1</option>
         </select>
-        </div>
-      </section>
-    </div>
-      <div class="mailing">
-        <h1>Подпишитесь на рассылку</h1>
-        <p>Только полезная информация и никакого спама,
-          честное бойскаутское!</p>
-          <input  placeholder="Ваш e-mail" id="email-button">
-          <label for="email-button">Подписаться</label>
+      </div>
+    </section>
+  </div>
+    <div class="mailing">
+      <h1>Подпишитесь на рассылку</h1>
+      <p>Только полезная информация и никакого спама,
+        честное бойскаутское!</p>
+        <input  placeholder="Ваш e-mail" id="email-button">
+        <label for="email-button">Подписаться</label>
       </div>
     </main>
-    <footer class="page-footer">
-      <div class="footer-container">
-        <div class="social-block">
-        <img src="images/twitter.svg" alt="telegram сайта">
-               
-        <img src="images/social-facebook.svg" alt="facebook сайта">
-       
-        <img src="images/social-youtube.svg" alt="YouTube сайта">
+      <footer class="page-footer">
+        <div class="footer-container">
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="button" href="#">
+                <img src="images/twitter.svg" alt="telegram сайта">
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="button" href="#">
+                <img src="images/social-facebook.svg" alt="facebook сайта">
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="button" href="#">
+                <img src="images/social-youtube.svg" alt="YouTube сайта">
+              </a>
+            </li>
+          </ul>
+          <a class="telefon" href="+7 (812) 812-12-12">+7 (812) 812-12-12</a>
+          <div class="htmlacademy-block">
+          <img src="images/htmlacademy.svg" alt="htmlacademt сайт">
+        </div>
       </div>
-        <a class="telefon" href="+7 (812) 812-12-12">+7 (812) 812-12-12</a>
-        <div class="htmlacademy-block">
-        <img src="images/htmlacademy.svg" alt="htmlacademt сайт">
-      </div>
-      </div>
-  </footer>
+    </footer>
   </body>
 </html>

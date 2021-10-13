@@ -1,11 +1,3 @@
-@font-face {
-    font-family:"PT Sans",sans-serif;
-    font-style: normal;
-    font-weight: 400;
-
-    src: url("fonts/pt-sans-regular.woff2") format("woff2");
-    font-display: swap;
-}
 html {
     height: 100%;
   }
@@ -28,6 +20,8 @@ body{
 .main-logo {
     display: block;
     margin: 0 auto;
+    width:458px;
+    height:352px;
 }
 body {
     font-family: "PT Sans", sans-serif;
@@ -35,6 +29,10 @@ body {
     line-height:28px;
 }
 .logo-h1 {
+    /*
+    font-family:inherit;
+    Как установить Pt sans?Не работает шрифт почти на всех блоках.
+    */
     font-size:30px;
     line-height:36px;
     margin:0;
@@ -53,23 +51,35 @@ body {
     width:1200px;
     margin:0 auto;
 }
+.logo-nav{
+    width:138px;
+}
 .navigation-list {
-    width:500px;
+    display:flex;
+    flex-wrap:wrap;
+    width:550px;
     margin:0;
     padding:0;
+    list-style-type: none;
 }
 .navigation-user {
-    max-width:250px;
+    display:flex;
+    flex-wrap:wrap;
+    max-width:350px;
     margin-left:auto;
 }
 .navigation-link {
+    display: block;
     font-size:20px;
     line-height:26px;
     font-weight: 700;
+    text-align:center;
     color: #000000;
     background-color:#ffffff ;
     text-decoration: none;
-    text-transform: uppercase; 
+    margin:0;
+    padding:33px;
+    
   }
 .here-button{
         font-family: inherit;
@@ -77,22 +87,24 @@ body {
         line-height: 16px;
         font-weight: 700;
         color: #ffffff;
-        background-color: #756257;
         text-decoration: none;
         text-transform: uppercase;
-        border-radius: 4px;
+        background-color:#756257;
+        border-radius: 4px;      
+}
+.page-header{
+    height:65px;
 }
 .page-index {
     background-image: url("../images/index-background.jpg");
     width: 1200px;
     
-    left: 40px;
-    top: 65px;
     background-size: 100% auto;
     background-repeat: no-repeat;
   }
 .mailing-index {
     background-image: url("../images/background-mailing.jpg");
+    height:411px;
     background-size: 100% auto;
     background-repeat: no-repeat;
     text-align: center;
@@ -115,16 +127,24 @@ body {
     text-align: center;
 }
 .hotels{
+    background: rgba(131, 179, 211, 0.12); 
+    margin: 0;
+    padding: 0;
     color:#ffffff;
-    text-align: center;
-    background: rgba(131, 179, 211, 0.12);
+    text-align: center;;
 }
 .souvenirs{
     background-color: #83B3D3;
     color:#ffffff;
     text-align: center;
+    background: rgba(131, 179, 211, 0.12); 
+    margin: 0;
+    padding: 0;
 }
-
+.main-inner-svg{
+    margin-right:11px;
+    margin-left:68px;
+}
 .main-inner {
     background: url(../images/catalog-background.jpg);
     background-repeat: no-repeat;
@@ -171,12 +191,20 @@ body {
 }
 .sorting-block {
     display:flex;
-    margin-top:27px;
+    margin-top: 517;
+    margin-left:71px;
+    padding:0;
+    justify-content: space-between;
+    margin-top:39px;
 }
-
+.h2_sirting-block{
+    margin:0;
+    padding:0;
+}
+.sortying-type{
+    width: 1057px;
+}
 .select-control {
-    width: 141px;
-    height: 23px;
     font-family: inherit;
     font-style: normal;
     font-weight: normal;
@@ -184,7 +212,6 @@ body {
     line-height: 23px;
     color: #333333;
     border:none;
-    margin-top:39px;
 }
 .inner-header-title {
     font-family: inherit;
@@ -193,8 +220,9 @@ body {
     font-size: 60px;
     line-height: 78px;
     color: #FFFFFF;
-    
-    margin:0 auto;
+    padding:0;
+    margin-top:18px;
+    margin-left:66px;
 }
 .catalog-filter-title {
     font-family: inherit;
@@ -248,12 +276,17 @@ body {
     box-sizing: border-box;
     border-radius: 4px;
     padding: 16px;
+    margin:0;
+    text-decoration: none;
 }
 .mode-title-black {
     border: 2px solid #000000;
     box-sizing: border-box;
     border-radius: 4px;
     padding: 16px;
+}
+.mode-title-block{
+    
 }
 .product-card-title {
     font-family: inherit;
@@ -277,7 +310,7 @@ body {
     font-size: 16px;
     line-height: 21px;
     text-align: center;
-    text-transform: uppercase;
+    
     background: #F2F2F2;
     border-radius: 4px;
     color:#333333;
@@ -306,8 +339,58 @@ body {
     font-size: 24px;
     line-height: 28px;
     text-align: center;
-    text-transform: uppercase;
     color:black;
+    margin:0;
+    padding:0;
+    margin-top:100px;
+    margin-bottom:0;
+}
+.h2-block_svg{
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color:black;
+    margin-top:23px;
+}
+.h2-block_white{
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin:0;
+    padding:0;
+    margin-top:100px;
+    margin-bottom:0;
+}
+.block-number-one {
+    font-family: inherit;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center; 
+}
+.number-white {
+    font-family: inherit;
+    color:#ffffff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top:25px;
+    margin-bottom:0;
+}
+.block-number-one_p{
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top:25px;
+    margin-bottom:0;
 }
 .food {
     font-family: inherit;
@@ -316,7 +399,7 @@ body {
     font-size: 24px;
     line-height: 28px;
     text-align: center;
-    text-transform: uppercase;
+    
     background-color:#ffffff;
 }
 .number {
@@ -326,18 +409,29 @@ body {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    /* or 117% */
-    
     text-align: center;
-    text-transform: uppercase;
+    margin-top:48;
+    padding:0;
+    margin-bottom:0;
+    
 }
-.number-white {
+.number_none-svg{
+    color:#333333;
     font-family: inherit;
-    color:#ffffff;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
+    text-align: center;
+    margin: 0;
+    padding:0;
+    margin-bottom:0;
+    margin-top:26px;
+}
+.block-attractions{
+    background: rgba(131, 179, 211, 0.12); 
+    margin: 0;
+    padding: 0;
 }
 .souvenirs {
     background: rgba(131, 179, 211, 0.12);
@@ -345,7 +439,7 @@ body {
 .block-road {
     background: rgba(131, 179, 211, 0.2);
 }
-.blue-block {
+.block-tourist{
     background: rgba(131, 179, 211, 0.12); 
     margin: 0;
     padding: 0;
@@ -371,7 +465,15 @@ body {
     font-size: 30px;
     line-height: 36px;
     text-align: center;
-    text-transform: uppercase;
+}
+.souvenirs-svg {
+    margin-top:85px;
+}
+.food-svg{
+    margin-top:91px;
+}
+.hotels-svg{
+    margin-top:89px;
 }
 .searchhotels {
     font-family: inherit;
@@ -399,7 +501,6 @@ body {
     /* or 120% */
     color:#FFFFFF;
     text-align: center;
-    text-transform: uppercase;
 }
 .mailing-p {
     font-family: inherit;
@@ -430,7 +531,6 @@ body {
     height: 60px;
     border-radius: 10px 0px  0px 10px;
 }
-
 .for-email-button {
     font-family: inherit;
     font-style: normal;
@@ -440,7 +540,6 @@ body {
     /* or 130% */
     color:#FFFFFF;
     align-items: center;
-    text-transform: uppercase;
     
 }
 .for-email-button-block {
@@ -460,7 +559,6 @@ body {
     font-size: 16px;
     line-height: 21px;
     text-align: center;
-    text-transform: uppercase;
     text-decoration: none;
     color:#FFFFFF;
     padding-top:9px;
@@ -480,7 +578,6 @@ body {
     font-size: 16px;
     line-height: 21px;
     text-align: center;
-    text-transform: uppercase;
     text-decoration: none;
     color:#FFFFFF;
     padding-top:9px;
@@ -508,10 +605,22 @@ body {
     width: 1200px;
     margin: 0 auto;
 }
-.social-block {
-    width:300px;
-    margin-right:60px;
+.footer-social-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display:flex;
+    flex-wrap:wrap;
 }
+.footer-social-item{
+    width:30px;
+    height:30px;
+    margin-right: 8px; 
+    margin-bottom: 8px;
+}
+.footer-social-item:nth-child(3n) {
+    margin-right: 0;
+  }
 .htmlacademy-block {
     margin-left:auto;
     
@@ -522,12 +631,11 @@ body {
     font-weight: normal;
     font-size: 40px;
     line-height: 40px;
-    text-transform: uppercase;
     text-decoration: none;
     color:black;
-}
-.telefon-block {
-    text-align:center;
+    text-align: center;
+    width:720px;
+    margin-left:230px;
 }
 .text-sorting {
     font-family: inherit;
@@ -536,6 +644,12 @@ body {
     font-size: 18px;
     line-height: 23px;
     color: #333333;
+    margin-left:302px;
+    margin-right:68px;
+}
+.text-sorting-block{
+    display:flex;
+    flex-direction:row;
 }
 .option-control {
     font-family: inherit;
@@ -550,6 +664,8 @@ body {
     border-radius: 4px;
     width: 55px;
     height: 55px;
+    margin-left:auto;
+    margin-right:8px;
 }
 .pagination-current-gray {
     font-family: inherit;
@@ -586,6 +702,7 @@ body {
     border-radius: 4px;
     width: 55px;
     height: 55px;
+    margin-right:8px;
 }
 .link-more-div {
     margin-top:31px;
@@ -605,7 +722,7 @@ body {
     line-height: 26px;
     display: flex;
 
-    text-transform: uppercase;
+    
     text-decoration: none;
     color:#FFFFFF;
 }
@@ -628,17 +745,21 @@ body {
     display:flex;
     justify-content: space-around;
     align-content:column;
+    padding:0;
+    margin:0;
+    margin-left:45px;
 }
 .breadcrumbs {
     display:flex;
     flex-direction:row;
-    
+    padding:0;
+    margin:0;
     
 }
 .breadcrumbs-link {
     font-family: inherit;
     font-style: normal;
-    font-weight: normal;
+    font-weight: normal;    
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
@@ -647,12 +768,7 @@ body {
     margin-left:10px;
 }
 .product-card {
-    display:flex;
-}
-.product-card-block {
-border-top: 1px solid #E6E6E6;
-border-bottom: 1px solid #E6E6E6;
-margin:0 auto;
+    display:grid;
 }
 .sorting-footer-block {
     display:flex;   
@@ -660,10 +776,11 @@ margin:0 auto;
 .pagination-link_flex {
     display:flex;
     align-items: baseline;
+    margin-left:112px;
 }
-.line-dowland_more {
+.decoration-line {
     width: 1056px;
-    margin-top:30px;
+    height: 0px;
     border: 1px solid #E6E6E6;
-  
+    margin:30px 72px;
 }
