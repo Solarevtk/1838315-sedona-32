@@ -1,21 +1,52 @@
+@font-face {
+    font-family:"PT Sans";
+    font-style: normal;
+    font-weight: 400;
+
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family:"PT Sans";
+    font-style:normal;
+    font-weight: bold;
+
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
 html {
     height: 100%;
-  }
-body{
-
+    margin:0 auto;
+}
+.index-body{
     margin:0 auto;
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    font-family: "PT Sans",sans-serif;
+    font-size:24px;
+    line-height:28px;
+    text-transform: uppercase;
+
 }  
+.catalog-body{
+    margin:0 auto;
+    min-height: 100%;
+    font-family: "PT Sans";
+    font-size:24px;
+    line-height:28px;
+    
+}
 .main-container {
     flex-grow: 1;   
+    margin: 0 auto;
 }
 .page-container {
     width:1200px;
     margin: 0 auto;
     display:flex;
     flex-wrap:wrap;
+    text-transform: uppercase;
 }
 .main-logo {
     display: block;
@@ -23,22 +54,13 @@ body{
     width:458px;
     height:352px;
 }
-body {
-    font-family: "PT Sans", sans-serif;
-    font-size:24px;
-    line-height:28px;
-}
 .logo-h1 {
-    /*
-    font-family:inherit;
-    Как установить Pt sans?Не работает шрифт почти на всех блоках.
-    */
+    font-family:"PT sans";
     font-size:30px;
     line-height:36px;
     margin:0;
     padding:0;
     text-align: center;
-
 }
 .p-logo {
     color: #333333;
@@ -75,22 +97,24 @@ body {
     font-weight: 700;
     text-align:center;
     color: #000000;
-    background-color:#ffffff ;
     text-decoration: none;
     margin:0;
     padding:33px;
+    font-family: 'PT sans';
+    text-transform: none;
     
-  }
+}
 .here-button{
-        font-family: inherit;
-        font-size: 16px;
-        line-height: 16px;
-        font-weight: 700;
-        color: #ffffff;
-        text-decoration: none;
-        text-transform: uppercase;
-        background-color:#756257;
-        border-radius: 4px;      
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color:#FFFFFF;
+    background: #756257;
+    border-radius: 4px;
 }
 .page-header{
     height:65px;
@@ -101,7 +125,7 @@ body {
     
     background-size: 100% auto;
     background-repeat: no-repeat;
-  }
+}
 .mailing-index {
     background-image: url("../images/background-mailing.jpg");
     height:411px;
@@ -141,19 +165,18 @@ body {
     margin: 0;
     padding: 0;
 }
-.main-inner-svg{
-    margin-right:11px;
-    margin-left:68px;
-}
 .main-inner {
     background: url(../images/catalog-background.jpg);
+    width: 1200px;
+    margin:0 auto;
+    margin-top:auto;
     background-repeat: no-repeat;
 }
 .select-control {
     color:#333333;
 }
 .button-repeat {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-size: 16px;
     background: none;
@@ -169,16 +192,17 @@ body {
     display:flex;
     flex-direction: column;
     margin:0 auto;
-    margin-right:160px;
+    padding-right:160px;
 }
 .button-use {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     background: none;
     color:#ffffff;
     border:none;
+    text-transform: uppercase;
     margin-left:25px;
     margin-top:10px;
 }
@@ -205,7 +229,7 @@ body {
     width: 1057px;
 }
 .select-control {
-    font-family: inherit;
+    font-family:"PT sans" ;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -214,18 +238,18 @@ body {
     border:none;
 }
 .inner-header-title {
-    font-family: inherit;
+    font-family: "PT Sans";
     font-style: normal;
+    margin:0;
     font-weight: bold;
     font-size: 60px;
-    line-height: 78px;
     color: #FFFFFF;
     padding:0;
-    margin-top:18px;
-    margin-left:66px;
+    padding-top:35px;
+    padding-left:63px;
 }
 .catalog-filter-title {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -237,26 +261,17 @@ body {
 .control-label {
     width: 63px;
     height: 23px;
-    font-family: inherit;
+    font-family: "PT sans" sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
     color: #FFFFFF;
 }
-.catalog-filter-title_type {
-    height: 26px; 
-    font-family: inherit;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 26px;
-    color: #FFFFFF;
-}
 .catalog-rilter-input_from-to {
     width: 20px;
     height: 23px;
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -265,11 +280,13 @@ body {
     color: #FFFFFF;
     opacity: 0.3;
 }
-.catalog-filter-list {
-    list-style: none;
-}
 .catalog-filter-group {
     border:none;
+    margin:0;
+}
+.catalog-filter-group:nth-child(2) {
+    margin:0;
+    padding-right:170px;
 }
 .mode-title {
     border: 2px solid #E6E6E6;
@@ -284,39 +301,6 @@ body {
     box-sizing: border-box;
     border-radius: 4px;
     padding: 16px;
-}
-.mode-title-block{
-    
-}
-.product-card-title {
-    font-family: inherit;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 31px;
-}
-.product-card-price {
-    font-family: inherit;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 23px;
-    color:#333333;
-}
-.rating {
-    font-family: inherit;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 21px;
-    text-align: center;
-    
-    background: #F2F2F2;
-    border-radius: 4px;
-    color:#333333;
-    width: 160px;
-    height: 37px;
-    
 }
 .white-block {
     background-color:#ffffff;
@@ -333,7 +317,7 @@ body {
     padding:63px 240px 139px;
 }
 .h2-block {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -346,7 +330,7 @@ body {
     margin-bottom:0;
 }
 .h2-block_svg{
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -356,7 +340,7 @@ body {
     margin-top:23px;
 }
 .h2-block_white{
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -368,14 +352,14 @@ body {
     margin-bottom:0;
 }
 .block-number-one {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-size: 24px;
     line-height: 28px;
     text-align: center; 
 }
 .number-white {
-    font-family: inherit;
+    font-family: "PT sans";
     color:#ffffff;
     font-style: normal;
     font-weight: normal;
@@ -384,7 +368,7 @@ body {
     margin-bottom:0;
 }
 .block-number-one_p{
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -393,7 +377,7 @@ body {
     margin-bottom:0;
 }
 .food {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -404,7 +388,7 @@ body {
 }
 .number {
     color:#333333;
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -417,7 +401,7 @@ body {
 }
 .number_none-svg{
     color:#333333;
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -445,10 +429,11 @@ body {
     padding: 0;
 }
 .sedona-hotels-block {
-    text-align: center;
+    margin:0 auto;
+    text-transform: uppercase;
 }
 .sedona-hotels-block-p {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
@@ -459,7 +444,7 @@ body {
 }
 .sedona-hotels-block-h2 {
     
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -476,7 +461,7 @@ body {
     margin-top:89px;
 }
 .searchhotels {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -493,7 +478,7 @@ body {
     margin:0 auto;
 }
 .mailing-h1 {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -503,7 +488,7 @@ body {
     text-align: center;
 }
 .mailing-p {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
@@ -515,7 +500,7 @@ body {
     color: #FFFFFF;
 }
 .mail-button {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -532,7 +517,7 @@ body {
     border-radius: 10px 0px  0px 10px;
 }
 .for-email-button {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -551,51 +536,6 @@ body {
 .mail_block{
     display:flex;
     margin-left:-100px;
-}
-.product-card-button {
-    font-family: inherit;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 21px;
-    text-align: center;
-    text-decoration: none;
-    color:#FFFFFF;
-    padding-top:9px;
-    padding-bottom:10px;
-    padding-left:15%;
-}
-.block-product-card {
-    width: 151px;
-    height: 37px;
-    background: #756257;
-    border-radius: 4px;
-}
-.product-card-button-blue {
-    font-family: inherit;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 21px;
-    text-align: center;
-    text-decoration: none;
-    color:#FFFFFF;
-    padding-top:9px;
-    padding-bottom:10px;
-    padding-left:15%;
-    
-}
-.button-blue {
-    width: 160px;
-    height: 37px;
-    background: #83B3D3;
-    border-radius: 4px;
-}
-.button-green {
-    width: 160px;
-    height: 37px;
-    background: #7DB54F;
-    border-radius: 4px;
 }
 .mode-title {
     margin:8px;
@@ -638,7 +578,7 @@ body {
     margin-left:230px;
 }
 .text-sorting {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -652,7 +592,7 @@ body {
     flex-direction:row;
 }
 .option-control {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -668,7 +608,7 @@ body {
     margin-right:8px;
 }
 .pagination-current-gray {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -683,7 +623,7 @@ body {
     
 }
 .pagination-link {
-    font-family: inherit;
+    font-family:"PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -715,7 +655,7 @@ body {
 .link-more {
     padding-top:15px;
     padding-left:200px;
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -751,13 +691,11 @@ body {
 }
 .breadcrumbs {
     display:flex;
-    flex-direction:row;
     padding:0;
     margin:0;
-    
 }
 .breadcrumbs-link {
-    font-family: inherit;
+    font-family: "PT sans";
     font-style: normal;
     font-weight: normal;    
     font-size: 16px;
@@ -765,10 +703,138 @@ body {
     color: #FFFFFF;
     width: 73px;
     height: 21px;
-    margin-left:10px;
+    padding-left:10px;
+}
+.catalog-filter-list {
+    list-style: none;
+    margin:0;
+    padding:0;
+    padding-bottom:45px;
+}
+.breadcrumbs-link_svg{
+    padding-right:11px;
+    padding-bottom:51px;
+}
+.product-card-button {
+    font-family: "PT sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    text-decoration: none;
+    color:#FFFFFF;
+    padding-top:9px;
+    padding-bottom:10px;
+    padding-left:15%;
+}
+.product-card-button {
+    width: 151px;
+    height: 18px;
+    margin:0 auto;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.button-blue {
+    width: 160px;
+    height: 37px;
+    background: #83B3D3;
+    border-radius: 4px;
+    grid-column:4/5;
+    grid-row:2/3;
+    align-self:end;
+}
+.block-product-card {
+    width: 151px;
+    height: 37px;
+    background: #756257;
+    border-radius: 4px;
+    grid-column:3/4;
+    grid-row:2/3;
+    margin-right:8px;
+    align-self:end;
+}
+.button-green {
+    width: 160px;
+    height: 37px;
+    background: #7DB54F;
+    border-radius: 4px;
+    grid-column:4/5;
+    grid-row:2/3;
+    align-self:end;
 }
 .product-card {
+    padding-left:72px;
     display:grid;
+    grid-template-rows: 50px 70px 50px 30px;
+    grid-template-columns: 180px 37px 160px 360px 160px;
+}
+.product-card-image{
+    width: 180px;
+    height: 120px;
+    grid-column: 1/2;
+    grid-row:1/-1;
+}
+.product-card-price:nth-child(1n){
+    grid-row:1/2;
+    grid-column:3/4;
+    align-self:end;
+    margin:0;
+    padding:0;
+}
+.product-card-price:nth-child(2n){
+    grid-row:1/2;
+    grid-column:4/5;
+    align-self:end;
+    margin:0;
+    padding:0;
+}
+.product-card-title {
+    font-family: "PT sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    grid-column:3/5;
+    grid-row:1/2;
+    align-self:end;
+}
+.product-card-price {
+    font-family: "PT sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color:#333333;
+    grid-column:2/5;
+    grid-row:2/3;
+}
+.rating {
+    font-family: "PT sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    margin:0;
+    background: #F2F2F2;
+    border-radius: 4px;
+    color:#333333;
+    width: 160px;
+    height: 37px;
+    grid-row:2/3;
+    grid-column:5/6;
+    align-self:end;
+}
+.block-stars{
+    grid-row:1/2;
+    grid-column:5/6;
+    justify-self: end;
 }
 .sorting-footer-block {
     display:flex;   
