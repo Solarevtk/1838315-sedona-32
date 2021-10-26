@@ -17,9 +17,11 @@
 html {
     height: 100%;
     margin:0 auto;
-
+    width: 1280px;
+    height: 3315px;
+    background: #F2F2F2;
 }
-.index-body{
+body{
     margin:0 auto;
     display: flex;
     flex-direction: column;
@@ -28,8 +30,12 @@ html {
     font-size:24px;
     line-height:28px;
     text-transform: uppercase;
-
+    background-color: #FFFFFF;
+    width:1200px;
 }  
+.index-background{
+    margin-top:7px;
+}
 .catalog-body{
     margin:0 auto;
     min-height: 100%;
@@ -99,8 +105,11 @@ html {
     display:flex;
     flex-wrap:wrap;
     max-width:350px;
+    width:550px;
+    margin:0;
     margin-left:auto;
     padding:0;
+    list-style-type: none;
 }
 .navigation-user .navigation-link:not(.here-button){
     padding:20px 20px;
@@ -117,9 +126,35 @@ html {
     color: #000000;
     text-decoration: none;
     margin:0;
-    padding:20px 30px 20px 30px;
+    padding:21px 30px 21px 30px;
     font-family: 'PT Sans';
     text-transform: none;
+}
+.navigation-list .navigation-link:hover{
+    border-bottom: 2px solid #756257;
+}
+
+.navigation-link:focus{
+    outline:none;
+    border: 3px solid #83B3D3;
+    padding:0;
+    border-radius: 4px;
+}
+.navigation-user .navigation-link:focus{
+    padding:10px;
+    width: 38px;
+    height:38px;
+    border: 3px solid #83B3D3;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.here-button:focus{
+    outline:none;
+    border: 3px solid #83B3D3;
+    border-radius: 4px;
+}
+.navigation-link:target{
+    opacity:0.3;
 }
 .navigation-item{
     align-self:center;
@@ -139,6 +174,8 @@ html {
     display:inline-block;
     padding:10px 10px;
     margin-bottom:4px;
+    text-align:center;
+    text-decoration: none;
 }
 .page-header{
     height:65px;
@@ -503,10 +540,7 @@ html {
 .search-hotels{
     margin-bottom:91px;
     display:block;
-    padding-top:13px;
-    padding-bottom:17px;
-    padding-left:150px;
-    padding-right:150px;
+    padding:13px 150px 17px 150px; 
     font-family: "PT Sans";
     font-style: normal;
     text-decoration: none;
@@ -518,6 +552,15 @@ html {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+.search-hotels:focus{
+    outline:none;
+    border: 3px solid #83B3D3;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.search-hotels:target{
+    opacity:0.3;
 }
 .mailing-h1 {
     font-family: "PT sans";
@@ -556,14 +599,22 @@ html {
     margin-left:200px;
     background: #F2F2F2;
     border:none;
-    width: 600px;
     height: 60px;
     padding-left:22px;
+    padding-right:381px;
     border-radius: 10px 0px  0px 10px;
 }
 .mail-button-block{
     display:flex;
     width:800px;
+}
+.mail-button:hover{
+    border: 2px solid #000000;
+    box-sizing: border-box;
+}
+.mail-button:focus{
+    outline:none;
+    border: 3px solid #83B3D3;
 }
 .for-email-button {
     font-family: "PT sans";
@@ -578,7 +629,12 @@ html {
     background: #83B3D3;
     border-radius: 0px 10px 10px 0px;
     padding:1px 35px;
-}
+} 
+/* .for-email-button:focus{ 
+    outline: none;
+    border: 3px solid #756257;
+    НЕ РАБОТАЕТ СКОТИНА помогите почему не реагирует.
+}*/
 .mode-title {
     margin:8px;
 }
@@ -591,7 +647,6 @@ html {
     width: 1200px;
     margin: 0 auto;
     height:120px;
-    margin-top:40px;
 }
 .footer-social-list{
     margin: 0;
@@ -599,6 +654,7 @@ html {
     list-style-type: none;
     display:flex;
     flex-wrap:wrap;
+    align-self:center;
 }
 .footer-social-item{
     width:30px;
@@ -619,6 +675,32 @@ html {
     color:black;
     text-align: center;
     margin:0 auto;
+    align-self:center;
+}
+.telefon:hover{
+    color: #756257;
+}
+.telefon:focus{
+    border: 3px solid #83B3D3;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline:none;
+}
+.htmlacademy-image{
+    width:115px;
+    height:33px;
+    padding-top:42px;
+}
+.htmlacademy-image:hover{
+    color: #756257;
+}
+.htmlacademy-image:focus{
+    border: 3px solid #83B3D3;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline:none;
 }
 .text-sorting {
     font-family: "PT sans";
