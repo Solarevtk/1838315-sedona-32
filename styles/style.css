@@ -18,7 +18,6 @@ html {
     height: 100%;
     margin:0 auto;
     width: 1280px;
-    height: 3315px;
     background: #F2F2F2;
 }
 body{
@@ -29,12 +28,12 @@ body{
     font-family: "PT Sans",sans-serif;
     font-size:24px;
     line-height:28px;
-    text-transform: uppercase;
+
     background-color: #FFFFFF;
     width:1200px;
 }  
 .index-background{
-    margin-top:7px;
+    margin-top:3px;
 }
 .catalog-body{
     margin:0 auto;
@@ -68,6 +67,7 @@ body{
     margin:0;
     padding:0;
     text-align: center;
+    text-transform: uppercase;
 }
 .p-logo {
     position: absolute;
@@ -100,6 +100,7 @@ body{
     margin:0;
     padding:0;
     list-style-type: none;
+    height:65px;
 }
 .navigation-user {
     display:flex;
@@ -126,7 +127,7 @@ body{
     color: #000000;
     text-decoration: none;
     margin:0;
-    padding:21px 30px 21px 30px;
+    padding:19px 30px 21px 30px;
     font-family: 'PT Sans';
     text-transform: none;
 }
@@ -192,6 +193,35 @@ body{
     text-align:center;
     margin-bottom:50px;
 }
+.mailing-inner-h1{
+    margin-top:89px;
+    margin-left:240px;
+    width: 720px;
+    height: 50px;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+.mailing-inner-p{
+    width: 720px;
+    height: 72px;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
+    margin-left:240px;
+}
+.mailing .mail-button-block{
+    margin-bottom:137px;
+}
 .block {
     background-color: #83B3D3;
     color:#ffffff;
@@ -227,72 +257,54 @@ body{
     margin:0 auto;
     margin-top:auto;
     background-repeat: no-repeat;
+    margin-top:3px;
 }
 .select-control {
     color:#333333;
 }
-.button-repeat {
-    font-family: "PT sans";
-    font-style: normal;
-    font-size: 16px;
-    background: none;
-    color:#ffffff;
-    border:none;
-    margin-left:25px;
-    margin-top:10px;
-}
-.button-repeat-block {
-    margin-top:10px;
-}
-.button-catalog{
-    display:flex;
-    flex-direction: column;
-    margin:0 auto;
-    padding-right:160px;
-}
-.button-use {
-    font-family: "PT sans";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    background: none;
-    color:#ffffff;
-    border:none;
-    text-transform: uppercase;
-    margin-left:25px;
-    margin-top:10px;
-}
-.button-use-block {
-    background: #83B3D3;
-    border-radius: 4px;
-    width: 160px;
-    height: 48px;
-    margin:0 auto;
-}
 .sorting-block {
     display:flex;
-    margin-top: 517;
-    margin-left:71px;
-    padding:0;
-    justify-content: space-between;
-    margin-top:39px;
+    flex-direction: row;
+    margin-top:130px;
+    width: 1200px;
+    height: 48px;
+    align-items:center;
+    margin-bottom:74px;
 }
-.h2_sirting-block{
+.sorting-block::after{
+    content:"";
+    margin-top:130px;
+    border:1px solid #E6E6E6;
+}
+.h2-sorting-block{
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: #000000;
     margin:0;
-    padding:0;
+    padding-left:71px;
+    width: 529px;
 }
 .sortying-type{
     width: 1057px;
+    height:48px;
 }
-.select-control {
+.sorting-type .select-control {
     font-family:"PT sans" ;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
     color: #333333;
-    border:none;
-}
+    border: 2px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding:12px 127px 13px 19px;
+    margin:0;
+    }
 .inner-header-title {
     font-family: "PT Sans";
     font-style: normal;
@@ -302,7 +314,7 @@ body{
     color: #FFFFFF;
     padding:0;
     padding-top:35px;
-    padding-left:63px;
+    padding-left:71px;
 }
 .catalog-filter-title {
     font-family: "PT sans";
@@ -338,25 +350,48 @@ body{
 }
 .catalog-filter-group {
     border:none;
-    margin:0;
+    margin-left:51px;
 }
 .catalog-filter-group:nth-child(2) {
     margin:0;
     padding-right:170px;
 }
+.catalog-filter-group:nth-child(3){
+    padding:0;
+    width:287px;
+    margin:0;
+}
+.mode-title-block{
+    width:160px;
+    display:flex;
+    flex-direction: row;   
+    padding:0;
+    margin-left:81px;
+    margin-right:72px;
+}
 .mode-title {
+    text-decoration: none;
     border: 2px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 4px;
-    padding: 16px;
+    padding:17px 16px;
+    margin-right:8px;
+}
+.mode-title:nth-child(3){
     margin:0;
-    text-decoration: none;
 }
 .mode-title-black {
     border: 2px solid #000000;
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding: 16px;
+}
+.mode-title-block::after{
+    position:absolute;
+    width:1056px;
+    left:145px;
+    
+    top: 607px;
+    border: 1px solid #E6E6E6;
+    content: "";
+
 }
 .white-block {
     background-color:#ffffff;
@@ -633,11 +668,7 @@ body{
 /* .for-email-button:focus{ 
     outline: none;
     border: 3px solid #756257;
-    НЕ РАБОТАЕТ СКОТИНА помогите почему не реагирует.
 }*/
-.mode-title {
-    margin:8px;
-}
 .page-footer{
     margin:0 auto;
 
@@ -712,6 +743,18 @@ body{
     margin-left:302px;
     margin-right:68px;
 }
+.text-sorting-block .select-control{
+    padding:13px 133px 17px 12px;
+    border:none;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    border: 2px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
 .text-sorting-block{
     display:flex;
     flex-direction:row;
@@ -724,72 +767,36 @@ body{
     line-height: 23px;
     color: #333333;
 }
-.pagination-link-block-gray {
-    background-color: #F2F2F2;
-    border-radius: 4px;
-    width: 55px;
-    height: 55px;
-    margin-left:auto;
-    margin-right:8px;
-}
-.pagination-current-gray {
-    font-family: "PT sans";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 26px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
-    color: #000000;
-    padding-top:22%;
-    padding-left:37%;
-    
-}
-.pagination-link {
-    font-family:"PT sans";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 26px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    text-decoration: none;
-    padding-top:22%;
-    padding-left:37%;
-}
-.pagination-link-block{
-    background-color: #83B3D3;
-    border-radius: 4px;
-    width: 55px;
-    height: 55px;
-    margin-right:8px;
-}
-.link-more-div {
-    margin-top:31px;
-    margin-left:288px;
-    width: 625px;
-    height: 55px;
-    background-color: #83B3D3;
-    border-radius: 4px;
-}
-.link-more {
-    padding-top:15px;
-    padding-left:200px;
-    font-family: "PT sans";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 26px;
-    display: flex;
 
-    
+.link-download-more{
+    position:relative;
+    bottom:20px;
+    margin-bottom:60px; 
+    margin-left:288px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    width: 625px;
+    padding-top:17px;
+    padding-bottom:17px;
+    background-color: #83B3D3;
+    border-radius: 4px;
+    font-family: "PT sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    display:block;
     text-decoration: none;
     color:#FFFFFF;
+}
+.sorting-footer-block::after{
+    content:"";
+    width: 1056px;
+    position:absolute;
+    left: 145px;
+    top:1525px;
+    border-bottom: 1px solid #E6E6E6;
 }
 .block {
     width:400px;
@@ -809,11 +816,8 @@ body{
 }
 .main-page-block{
     display:flex;
-    justify-content: space-around;
-    align-content:column;
     padding:0;
     margin:0;
-    margin-left:45px;
 }
 .breadcrumbs {
     display:flex;
@@ -838,26 +842,51 @@ body{
     padding-bottom:45px;
 }
 .breadcrumbs-link_svg{
-    padding-right:11px;
-    padding-bottom:51px;
+    margin-right:26px;
 }
-.product-card-button {
-    font-family: "PT sans";
+ .breadcrumbs-link_svg::after{ 
+    content:"";
+    background:url(../images/nav-link.png);
+    color:#FFFFFF;
+ }
+.button-use{
+    position: absolute;
+    width: 160px;
+    height: 48px;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: 21px;
-    text-align: center;
-    text-decoration: none;
-    color:#FFFFFF;
-    padding-top:9px;
-    padding-bottom:10px;
-    padding-left:15%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #83B3D3;
+    border-radius: 4px;
+    border:none;
+    margin-top:85px;
 }
-.product-card-button {
-    width: 151px;
-    height: 18px;
-    margin:0 auto;
+.button-repeat{
+    position: absolute;
+    width: 160px;
+    height: 23px;
+    top: 367px;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    background:none;   
+    border:none; 
+}
+.range-toggle{
+    padding:0;
+}
+.elected-button{
+    background: #83B3D3;
+    border-radius: 4px;
+    align-self:end;
     font-family: "PT Sans";
     font-style: normal;
     font-weight: bold;
@@ -865,25 +894,36 @@ body{
     line-height: 21px;
     text-align: center;
     text-transform: uppercase;
-}
-.button-blue {
-    width: 160px;
-    height: 37px;
-    background: #83B3D3;
-    border-radius: 4px;
+    color:#FFFFFF;
+    padding-top:9px;
+    padding-bottom:10px;
     grid-column:4/5;
     grid-row:2/3;
-    align-self:end;
+    width:160px;
+    text-decoration: none;
 }
-.block-product-card {
-    width: 151px;
-    height: 37px;
+#green-button{
+    background: #7DB54F;
+}
+.detailed-button{
+    font-family: "PT Sans";
+    color:#FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration:none;
     background: #756257;
     border-radius: 4px;
     grid-column:3/4;
     grid-row:2/3;
     margin-right:8px;
     align-self:end;
+    padding-top:9px;
+    padding-bottom:10px;
+    width:151px;
 }
 .button-green {
     width: 160px;
@@ -899,6 +939,14 @@ body{
     display:grid;
     grid-template-rows: 50px 70px 50px 30px;
     grid-template-columns: 180px 37px 160px 360px 160px;
+}
+.product-card::after{
+    content:"";
+    width: 1056px;
+    position:absolute;
+    left: 145px;
+    padding-bottom:150px;
+    border-bottom: 1px solid #E6E6E6;
 }
 .product-card-image{
     width: 180px;
@@ -940,19 +988,20 @@ body{
     grid-column:2/5;
     grid-row:2/3;
 }
-.rating {
+.raiting {
     font-family: "PT sans";
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 21px;
     text-align: center;
-    margin:0;
     background: #F2F2F2;
     border-radius: 4px;
     color:#333333;
     width: 160px;
-    height: 37px;
+    margin:0;
+    padding-top:9px;
+    padding-bottom:10px;
     grid-row:2/3;
     grid-column:5/6;
     align-self:end;
@@ -963,16 +1012,40 @@ body{
     justify-self: end;
 }
 .sorting-footer-block {
-    display:flex;   
+    display:flex;  
+    flex-direction:row; 
 }
-.pagination-link_flex {
-    display:flex;
-    align-items: baseline;
-    margin-left:112px;
+.pagination-link {
+    font-family:"PT sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #83B3D3;
+    border-radius: 4px;
+    width: 55px;
+    padding-top:15px;
+    padding-bottom:15px;
+    margin-right:8px;
 }
-.decoration-line {
-    width: 1056px;
-    height: 0px;
-    border: 1px solid #E6E6E6;
-    margin:30px 72px;
+#gray-block{
+    font-family: "PT sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    margin-right:8px;
+    margin-left:31px;
+
 }
