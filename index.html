@@ -20,16 +20,43 @@
           </li>
         </ul>
           <img class="logo-nav" src="images/sedona-nav.png" alt="лоотип в навигации">
-        <ul class="navigation-user">
+        <ul class="navigation-user navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <img class="search" src="images/search.svg" alt="кнопка поиска">
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+              <button class="popover-close-button ">
               <img class="sedona-like" src="images/like-vector.svg" alt="Кнопка оценить">
-            </a>
+              <!-- кнопка закрытия поповера -->
+            </button>
+            <!-- поповер -->
+             <div class="popover popover-cart"> 
+              <div class="popover-content">
+                
+                <ul class="cart-items-list">
+                  <li class="cart-item">
+                    <img class="cart-item-image" src="images/hotel-1-small.png" alt="фото мотеля">
+                    <p class="cart-item-title">Desert Quail Inn</p>
+                    <p class="cart-item-type-hotel">Мотель</p>
+                    <button type="button" class="cart-item-button button">
+                      <img  src="images/delete-svg.svg" alt="корзина">
+                    </button> 
+                  </li>
+                  <li class="cart-item">
+                    <img class="cart-item-image" src="images/hotel-2-small.png" alt="фото апартаментов"
+                    style="border:none">
+                    <p class="cart-item-title">Villas at Poco Diablo</p>
+                    <p class="cart-item-type-hotel">Апартаменты</p>
+                    <button type="button" class="cart-item-button button">
+                      <img  src="images/delete-svg.svg" alt="корзина">
+                    </button>
+                    </li>
+                    <h2 class="popover-title">Все Избранные</h2>
+                </ul>
+              </div>
+             </div> 
           </li>
           <li class="navigation-item ">
             <a class="here-button" href="navigation-button.html">Хочу Сюда!</a>
@@ -38,8 +65,6 @@
       </nav>
     </header>
     <main class=" main-container">
-  <img class="logo-sedona" src="images/welcome.png" alt="логотип сеодны">
-  <img class="index-background" src="images/index-background.jpg" alt="задний фон логотипа"> 
       <div class="white-block">
         <div class="logo-block">
       <h1 class="logo-h1">Седона — небольшой городок в Аризоне,<br>
@@ -114,9 +139,11 @@
           <h1 class="mailing-h1">Подпишитесь на рассылку</h1>
           <p class="mailing-p">Только полезная информация и никакого спама,<br>
             честное бойскаутское!</p>
-            <div class="mail-button-block">
+              <form action="" method="post">
+                <div class="mail-button-block">
             <input  class="mail-button" placeholder="Ваш e-mail" id="email-button">
             <label class="for-email-button" for="email-button">Подписаться</label>
+          </form>
           </div>
           </div>
     </div>
@@ -147,5 +174,54 @@
       </div>
     </div>
   </footer>
+  <div class="modal-container">
+    <div class="modal modal-auth">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group">
+            <label class="modal-content-label field" for="check-in-date">Дата заезда:</label>
+            <input class="auth-form-field field" type="text" id="check-in-date" name="auth-login" placeholder="ЧЧ/ММ/ГГ">
+            <button type="button" class="calendar-button"></button>
+            <!-- параграф скрыт visually-hidden -->
+            <p class=" visually-hidden modal-title-wrong-answer" id="red-p">Мы не можем отправить вас в прошлое.</p>
+          </p>
+          <p class="field-group">
+            <label class="modal-content-label field" for="check-out-date">Дата выезда:</label>
+            <input class="auth-form-field field" type="text" id="check-out-date" name="auth-login" placeholder="ЧЧ/ММ/ГГ">
+            <button type="button" class="calendar-button"></button>
+            <!-- параграф скрыт visually-hidden -->
+            <p class=" visually-hidden modal-title-wrong-answer">На эти даты есть свободные номера. Пока есть.</p>
+          </p>
+          <!-- Раздел Взрослые: -->
+          <p class="field-group" id="block-adult-baby">
+            <label class="modal-content-label field" for="adult">Взрослые:</label>
+            <button type="button" class="adult-minus modal-content-button"></button>
+            <input  class="number-of-people"type="text" placeholder="2">
+            <button type="button" class="adult-plus modal-content-button"></button>
+            <!-- раздел Дети: -->
+            <label class="modal-content-label field" for="baby">Дети:</label>
+            <button type="button" class="more-inf">i</button> 
+            <button type="button" class="baby-minus modal-content-button"></button>  
+            <input  class="number-of-people"type="text" placeholder="1">
+            <button type="button" class="baby-plus modal-content-button"></button> 
+            <div class="more-inf-popover"> <!-- подсказка отключена в CSS -->
+              <p class="more-inf-popover-content">
+                Укажите количество детей, которые
+                будут с вами, возраст <br> которых от 6
+                до 18 лет. Дети до 6 лет
+                размещаются бесплатно.
+              </p>
+            </div>
+          </p>
+          <button type="submit" class="modal-submit">Найти</button>
+        </form>
+      </section>
+    </div>
+  </div>
   </body>
 </html>

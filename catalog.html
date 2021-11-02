@@ -37,11 +37,11 @@
         </ul>
       </nav>
     </header>
-    <main class="main-inner main-container">
+    <main class="main-inner">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны
         
-          <ol class="breadcrumbs catalog-filter-list">
+          <ul class="breadcrumbs catalog-filter-list">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link_svg" href="index.html">
                 <img class="main-inner-svg" src="images/main-navigation.svg" alt="Главная">
@@ -50,7 +50,7 @@
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
-          </ol>
+          </ul>
         </h1>
         </header>
       </header>
@@ -63,73 +63,90 @@
             
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <label class="control">
-              <ol class="catalog-filter-list">
-            <li>
+              <ul class="catalog-filter-list">
+            <li class="catalog-filter">
+              <label class="control">
               <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked>
               <span class="control-mark"></span>
               <span class="control-label">Бассейн</span>
+              </label>
             </li>
-            <li>
+            <li class="catalog-filter">
+              <label class="control">
               <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
               <span class="control-mark"></span>
               <span class="control-label">Парковка</span>
+              </label>
             </li>
-            <li>
+            <li class="catalog-filter">
+              <label class="control">
               <input class="visually-hidden control-input" type="checkbox" name="Wi-Fi">
               <span class="control-mark"></span>
               <span class="control-label">Wi-Fi</span>
+              </label>
             </li>
-          </ol>
+          </ul>
             </label>
           </fieldset>
 
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Тип жилья:</legend>
 
-            <ol class="catalog-filter-list">
-              <li class="catalog-filter-item">
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter">
                 <label class="control">
                   <input class="visually-hidden control-input" type="radio" name="product-group" value="hotel"checked>
                   <span class="control-mark"></span>
               <span class="control-label">Гостиница</span>
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="catalog-filter">
                 <label class="control">
                   <input class="visually-hidden control-input" type="radio" name="product-group" value="motel" >
                   <span class="control-mark"></span>
               <span class="control-label">Мотель</span>
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="catalog-filter">
                 <label class="control">
                   <input class="visually-hidden control-input" type="radio" name="product-group" value="appartament">
                   <span class="control-mark"></span>
               <span class="control-label">Аппартаменты</span>
                 </label>
               </li>
-            </ol>
+            </ul>
           </fieldset>
 
           <fieldset class="catalog-filter-group">
+
+          <div class="range-wrapper-inputs">
+                  <form action="" method="post">
+            <label class="catalog-filter-label">
+              <input class="range-input range-input-one" type="number" name="min-price" value="0"> <div class="catalog-filter-input_from-to">от</div>
+           </label>
+  
+           <label class="catalog-filter-label">
+               <input class="range-input range-input-two" type="number" name="max-price" value="9000"> <div class="catalog-filter-input_from-to">до</div>
+           </label>
+           </form>
+          </div>
+
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-            <button class="range-toggle toggle-min" type="button">
-              <span class="visually-hidden">Изменить минимальную цену.</span>
-            </button> 
 
-            <button class="range-toggle toggle-max" type="button">
-              <span class="visually-hidden">Изменить максимальную цену.</span>
-
-            </button>
-
+            <div class="range">
+              <div class="range-scale">
+                <div class="range-bar" style="left: 0px; width: 227px">
+                  <button class="range-toggle toggle-min" type="button">
+                    <span class="visually-hidden"></span>
+                  </button> 
+                  <button class="range-toggle toggle-max" type="button">
+                    <span class="visually-hidden"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
             
-            <label class="catalog-filter-label">
-               <input class="catalog-filter-input" type="number" name="min-price"> <div class="catalog-rilter-input_from-to">от</div>
-            </label>
-
-            <label class="catalog-filter-label">
-                <input class="catalog-filter-input" type="number" name="max-price"> <div class="catalog-rilter-input_from-to">до</div>
-            </label>
+            
 
           </fieldset>
            <div class="button-catalog">
@@ -269,8 +286,12 @@
       <p class="mailing-inner-p">Только полезная информация и никакого спама,<br>
         честное бойскаутское!</p>
         <div class="mail-button-block">
+          <form class="mail-button-form" action="" method="post">
+            <div class="mail-button-block">
           <input  class="mail-button" placeholder="Ваш e-mail" id="email-button">
           <label class="for-email-button" for="email-button">Подписаться</label>
+          </form>
+        </div>
         </div>
       </div>
     </main>

@@ -32,9 +32,17 @@ body{
     background-color: #FFFFFF;
     width:1200px;
 }  
-.index-background{
-    margin-top:3px;
-}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
 .catalog-body{
     margin:0 auto;
     min-height: 100%;
@@ -46,6 +54,26 @@ body{
 .main-container {
     flex-grow:1;
     margin: 0 auto;
+    position:relative;
+}
+.main-container::after{
+    position:absolute;
+    content:"";
+    background:url("../images/index-background.jpg");
+    z-index:auto;
+    width: 1200px;
+    height: 485px;
+    top: 0px;
+}
+.main-container::before{
+    position:absolute;
+    content:"";
+    background:url("../images/welcome.png");
+    width: 458px;
+    height: 352px;
+    margin-left:371px;
+    top: 97px;
+    z-index:1;
 }
 .page-container {
     width:1200px;
@@ -87,7 +115,122 @@ body{
     width:1200px;
     margin:0 auto;
 }
+.popover{
+    position: absolute;
+    top:48px;
+    left:-170px;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 400px;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding:25px;
+    min-height: 232px;
+    font-family:"PT sans",sans-serif;
+    color:#000000;
+    background-color:#FFFFFF;
+    display:none;
+    /* Отключил поповер */
+    
+}
+.popover-cart::before{
+    position:absolute;
+    content:"";
+    width:20px;
+    height:9px;
+    left: 140px;
+    top: 10px;
+    z-index:3;
+    background:url("images/popover-vector.svg");
+    /* вектор указывающий на кнопку закрытия попапа */
+}
+.popover-content {
+    height: 100%;
+}
+.popover-title{
+    position:absolute;
+    left:-1px;
+    padding-top:22px;
+    padding-bottom:22px;
+    width: 401px;
+    font-family: "PT Sans",sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;  
+    text-align: center;
+    text-transform: uppercase;
+    color:#FFFFFF;
+    background: #756257;
+    border-radius: 0px 0px 20px 20px;
+    margin-top:22px;
+}
+.cart-item{
+    display:grid;
+    margin-bottom:auto;
+    grid-template-columns: 65px 260px 50px;
+    grid-template-rows: 50px;
+}
+.cart-item + .cart-item{
+    margin-top:24px;
+}
+.popover-cart{
+    width:400px;
+}
+.cart-items-list{
+    padding:0;
+}
+.cart-item-image{
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    grid-row:1/2;
+    grid-column:1/2;
+    border: 1px solid #000000;
+}
+.cart-item-title{
+    height:36px;
+    font-family:"PT Sans",sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+    color: #000000;
+    display:flex;
+    flex-direction: column;
+    align-self:flex-end;
+    grid-column:2/3;
+    grid-row:1/2;
+}
+.cart-item-type-hotel{
+    margin:0;
+    padding:0;
+    width: 244px;
+    font-family: "PT Sans",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 40px;
+    display: flex;
+    align-items: flex-end;
+    color: #333333;
+    grid-column:2/3;
+    grid-row:1/2;
+}
+.cart-item .button {
+    grid-column: 3 / 4;
+    align-self:flex-start;
+    border:none;
+    background:none;
+    width: 16px;    
+    height: 36px;
+    padding:0;
+    margin:0;
+}
 .logo-nav{
+    z-index:2;
     position:absolute;
     width:138px;
     margin-left:531px;
@@ -105,21 +248,30 @@ body{
 .navigation-user {
     display:flex;
     flex-wrap:wrap;
+    background-color:#FFFFFF;
     max-width:350px;
     width:550px;
     margin:0;
     margin-left:auto;
     padding:0;
     list-style-type: none;
+    z-index:2;
 }
 .navigation-user .navigation-link:not(.here-button){
-    padding:20px 20px;
+    padding:0;
+    margin-right:21px;
 }
 .search{
-    padding-top:10px;
+    width:18px;
+    height:18px;
 }
-.navigation-link {
-    display: block;
+.sedona-like{
+    position: relative;
+    bottom:3px;
+    width:31px;
+    height:27px;
+}
+.navigation-link {  
     font-size:20px;
     line-height:26px;
     font-weight: 700;
@@ -131,7 +283,7 @@ body{
     font-family: 'PT Sans';
     text-transform: none;
 }
-.navigation-list .navigation-link:hover{
+.navigation-list:not(.navigation-user) .navigation-link:hover{
     border-bottom: 2px solid #756257;
 }
 
@@ -157,8 +309,15 @@ body{
 .navigation-link:target{
     opacity:0.3;
 }
+.popover-close-button {
+    background:none;
+    border:none;
+    padding:0;
+    margin-right:20px;
+}
 .navigation-item{
     align-self:center;
+    position: relative;
 }
 .here-button{
     width:160px;
@@ -198,7 +357,7 @@ body{
     margin-left:240px;
     width: 720px;
     height: 50px;
-    font-family: "PT Sans";
+    font-family: "PT Sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -210,7 +369,7 @@ body{
 .mailing-inner-p{
     width: 720px;
     height: 72px;
-    font-family: "PT Sans";
+    font-family: "PT Sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
@@ -221,6 +380,10 @@ body{
 }
 .mailing .mail-button-block{
     margin-bottom:137px;
+}
+.mail-button-form{
+    width:0px;
+    height:0px;
 }
 .block {
     background-color: #83B3D3;
@@ -258,26 +421,25 @@ body{
     margin-top:auto;
     background-repeat: no-repeat;
     margin-top:3px;
+    flex-grow:1;
+    margin: 0 auto;
 }
 .select-control {
     color:#333333;
 }
 .sorting-block {
+    position:relative;
     display:flex;
     flex-direction: row;
-    margin-top:130px;
     width: 1200px;
     height: 48px;
     align-items:center;
     margin-bottom:74px;
-}
-.sorting-block::after{
-    content:"";
-    margin-top:130px;
-    border:1px solid #E6E6E6;
+    margin-top:126px;
 }
 .h2-sorting-block{
-    font-family: "PT Sans";
+    position:relative;
+    font-family: "PT Sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -293,7 +455,7 @@ body{
     height:48px;
 }
 .sorting-type .select-control {
-    font-family:"PT sans" ;
+    font-family:"PT sans",sans-serif ;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -306,7 +468,7 @@ body{
     margin:0;
     }
 .inner-header-title {
-    font-family: "PT Sans";
+    font-family: "PT Sans",sans-serif;
     font-style: normal;
     margin:0;
     font-weight: bold;
@@ -317,7 +479,7 @@ body{
     padding-left:71px;
 }
 .catalog-filter-title {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -325,6 +487,70 @@ body{
     color:#FFFFFF;
     width: 150px;
     height: 26px;
+    margin-bottom:30px;
+    padding:0;
+}
+.main-page-block:first-child{
+    margin-left:19px;
+}
+.control{
+    position: relative;
+    display: block;
+}
+.control-mark{
+    position:absolute;
+    width:20px;
+    height:20px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    border:none;
+    top: 6px;
+    left: 0;
+}
+.control-mark:hover{
+    background: rgba(255, 255, 255, 0.6);
+}   
+.control-mark:focus{
+    background: rgba(255, 255, 255, 0.6);
+    border: 3px solid #83B3D3;
+}
+.control-input[type="checkbox"]:checked + .control-mark::before{
+    position: absolute;
+    top: 10px;
+    left: 4px;
+    width: 6px;  
+    height: 2px;
+    background-color: #3F5E72;
+    content: "";
+}
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  width: 10px;  
+  height: 2px;
+  background-color: #3F5E72;
+  content: "";
+}
+.control-input[type="checkbox"]:checked + .control-mark::before {
+    transform: rotate(40deg);
+  }
+  
+.control-input[type="checkbox"]:checked + .control-mark::after {
+    transform: rotate(130deg);
+}
+.control-input[type="radio"] + .control-mark {
+    border-radius: 50%;
+}
+.control-input[type="radio"]:checked + .control-mark::before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background: #3F5E72;
+    border-radius: 50%;
+    content: "";
 }
 .control-label {
     width: 63px;
@@ -335,28 +561,32 @@ body{
     font-size: 18px;
     line-height: 23px;
     color: #FFFFFF;
+    padding-left:39px;  
 }
-.catalog-rilter-input_from-to {
+.catalog-filter-input_from-to {
     width: 20px;
     height: 23px;
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
     text-align: right;
+    align-self:center;
     color: #FFFFFF;
     opacity: 0.3;
+    padding-right:14px;
 }
 .catalog-filter-group {
+    margin:0;
     border:none;
     margin-left:51px;
+    padding:0;
 }
-.catalog-filter-group:nth-child(2) {
-    margin:0;
+.catalog-filter-group:nth-child(2n) {
     padding-right:170px;
 }
-.catalog-filter-group:nth-child(3){
+.catalog-filter-group:nth-child(3n){
     padding:0;
     width:287px;
     margin:0;
@@ -386,12 +616,10 @@ body{
 .mode-title-block::after{
     position:absolute;
     width:1056px;
-    left:145px;
-    
-    top: 607px;
+    left:72px;
+    top: 91px;
     border: 1px solid #E6E6E6;
     content: "";
-
 }
 .white-block {
     background-color:#ffffff;
@@ -410,9 +638,10 @@ body{
     margin: 0 auto;
     width:720px;
     padding:63px 240px 139px;
+    margin-top:480px;
 }
 .h2-block {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -425,7 +654,7 @@ body{
     margin-bottom:0;
 }
 .h2-block_svg{
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -437,7 +666,7 @@ body{
 .h2-block_white{
     width:200px;
     margin:0 auto;
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -447,7 +676,7 @@ body{
     margin-bottom:26px;
 }
 .block-number-one {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-size: 24px;
     line-height: 28px;
@@ -456,7 +685,7 @@ body{
 .block-number_p{
     width: 220px;
     height: 23px;
-    font-family: "PT Sans";
+    font-family: "PT Sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -469,7 +698,7 @@ body{
 }
 
 .food {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -480,7 +709,7 @@ body{
 }
 .number-block{
     color:#333333;
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -494,7 +723,7 @@ body{
     margin:0 auto;
     width:250px;
     color:#333333;
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -507,7 +736,7 @@ body{
 }
 .number_none-svg{
     color:#333333;
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -538,7 +767,7 @@ body{
     margin:0 auto;
 }
 .sedona-hotels-block-p {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
@@ -553,7 +782,7 @@ body{
     margin-top:91px;
     margin-bottom:15px;
     margin-bottom:15px;
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -576,7 +805,7 @@ body{
     margin-bottom:91px;
     display:block;
     padding:13px 150px 17px 150px; 
-    font-family: "PT Sans";
+    font-family: "PT Sans",sans-serif;
     font-style: normal;
     text-decoration: none;
     font-weight: bold;
@@ -594,11 +823,8 @@ body{
     box-sizing: border-box;
     border-radius: 10px;
 }
-.search-hotels:target{
-    opacity:0.3;
-}
 .mailing-h1 {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -611,7 +837,7 @@ body{
 }
 .mailing-p {
     margin:0 auto;
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight:normal;
     font-size: 22px;
@@ -623,7 +849,7 @@ body{
     margin-bottom:26px;
 }
 .mail-button {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -652,7 +878,7 @@ body{
     border: 3px solid #83B3D3;
 }
 .for-email-button {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -686,6 +912,7 @@ body{
     display:flex;
     flex-wrap:wrap;
     align-self:center;
+    margin-left:72px;
 }
 .footer-social-item{
     width:30px;
@@ -697,7 +924,7 @@ body{
     margin-right: 0;
   }
 .telefon {
-    font-family: "PT Sans",sans-serif,sans-serif;
+    font-family: "PT Sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
@@ -722,6 +949,7 @@ body{
     width:115px;
     height:33px;
     padding-top:42px;
+    margin-right:72px;
 }
 .htmlacademy-image:hover{
     color: #756257;
@@ -734,7 +962,7 @@ body{
     outline:none;
 }
 .text-sorting {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -746,7 +974,7 @@ body{
 .text-sorting-block .select-control{
     padding:13px 133px 17px 12px;
     border:none;
-    font-family: "PT Sans";
+    font-family: "PT Sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -760,7 +988,7 @@ body{
     flex-direction:row;
 }
 .option-control {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -781,7 +1009,7 @@ body{
     padding-bottom:17px;
     background-color: #83B3D3;
     border-radius: 4px;
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -789,13 +1017,14 @@ body{
     display:block;
     text-decoration: none;
     color:#FFFFFF;
+    margin-top:31px;
 }
 .sorting-footer-block::after{
     content:"";
     width: 1056px;
     position:absolute;
-    left: 145px;
-    top:1525px;
+    left: 145px;;
+    top: 1447px;
     border-bottom: 1px solid #E6E6E6;
 }
 .block {
@@ -825,7 +1054,7 @@ body{
     margin:0;
 }
 .breadcrumbs-link {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: normal;    
     font-size: 16px;
@@ -839,21 +1068,31 @@ body{
     list-style: none;
     margin:0;
     padding:0;
-    padding-bottom:45px;
+    
+}
+header .catalog-filter-list{
+    padding-bottom:68px;
 }
 .breadcrumbs-link_svg{
     margin-right:26px;
 }
- .breadcrumbs-link_svg::after{ 
+.blabla::after{ 
+    position:absolute;
+    background-image:url("../images/nav-link.png");
     content:"";
-    background:url(../images/nav-link.png);
-    color:#FFFFFF;
+
+}
+.button-catalog{
+    position:relative;
+    left:81px;
+    bottom:10px;
  }
 .button-use{
     position: absolute;
     width: 160px;
     height: 48px;
-    font-family: "PT Sans";
+    margin-top:70px;    
+    font-family: "PT Sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -863,14 +1102,14 @@ body{
     background: #83B3D3;
     border-radius: 4px;
     border:none;
-    margin-top:85px;
+    padding:0;
 }
 .button-repeat{
     position: absolute;
     width: 160px;
     height: 23px;
-    top: 367px;
-    font-family: "PT Sans";
+    top:150px;
+    font-family: "PT Sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -879,15 +1118,109 @@ body{
     color: #FFFFFF;
     background:none;   
     border:none; 
+    padding:0;
+}
+.range{
+    margin-left:10px;
+}
+.range-scale{
+    margin-top:32px;
+    height:4px;
+    background-color:#FFFFFF;
+    position:relative;
+    width:287px;
+    /* opacity:0.3; */
+}
+.range-bar{
+    position: absolute;
+    height:4px;
+    background-color: #FFFFFF;
+    /* opacity: 1;Почему не работает opacity:1 */
 }
 .range-toggle{
+    position: absolute;
+    width:20px;
+    height:20px;
+    background-color:#FFFFFF;
+    border-radius:5px;
+    cursor:pointer;
+    border:none;
+}
+.range-toggle:hover{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.range-toggle:focus{
+    border: 3px solid #83B3D3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.range-toggle:active{
+    border: 2px solid #83B3D3;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+}
+.toggle-min{
+    top:-8px;
+    left:-10px;
+}
+.toggle-max{
+    top:-8px;
+    right:-10px;
+}
+.range-wrapper-inputs{
+    position:relative; 
+    display:flex;
+    margin-top:4px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.catalog-filter-label{
+    display:flex;
+    align-items:center;
+
+}
+.range-input{
+    width: 40px;
+    font: inherit;
+    text-align: center;
+    background-color: transparent;
+    color:#FFFFFF;
+    border: none;
+    appearance: "textfield";
+    font-family: "PT Sans",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
     padding:0;
+}
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+.range-input-one{
+    margin-right:83px;
+    width:10px;
+    padding:14px 0px 11px 19px;
+}
+.range-input-two{
+    width:40px;
+    padding:14px 50px 11px 17px;
+}
+.range-wrapper-inputs::after{
+    content:"";
+    position:absolute;
+    width: 48px;
+    top:23px;
+    left:130px;
+    border-bottom: 2px solid #FFFFFF;
+    transform: rotate(90deg);
 }
 .elected-button{
     background: #83B3D3;
     border-radius: 4px;
     align-self:end;
-    font-family: "PT Sans";
+    font-family: "PT Sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -906,7 +1239,7 @@ body{
     background: #7DB54F;
 }
 .detailed-button{
-    font-family: "PT Sans";
+    font-family: "PT Sans",sans-serif;
     color:#FFFFFF;
     font-style: normal;
     font-weight: bold;
@@ -935,16 +1268,17 @@ body{
     align-self:end;
 }
 .product-card {
+    position:relative;
     padding-left:72px;
     display:grid;
-    grid-template-rows: 50px 70px 50px 30px;
-    grid-template-columns: 180px 37px 160px 360px 160px;
+    grid-template-rows: 50px 70px 58px;
+    grid-template-columns: 180px 37px 160px 500px 160px;
 }
 .product-card::after{
     content:"";
     width: 1056px;
     position:absolute;
-    left: 145px;
+    right:72px;
     padding-bottom:150px;
     border-bottom: 1px solid #E6E6E6;
 }
@@ -969,7 +1303,7 @@ body{
     padding:0;
 }
 .product-card-title {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -979,7 +1313,7 @@ body{
     align-self:end;
 }
 .product-card-price {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -989,7 +1323,7 @@ body{
     grid-row:2/3;
 }
 .raiting {
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -1016,7 +1350,7 @@ body{
     flex-direction:row; 
 }
 .pagination-link {
-    font-family:"PT sans";
+    font-family:"PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -1034,7 +1368,7 @@ body{
     margin-right:8px;
 }
 #gray-block{
-    font-family: "PT sans";
+    font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -1046,6 +1380,248 @@ body{
     background-color: #F2F2F2;
     border-radius: 4px;
     margin-right:8px;
-    margin-left:31px;
+    margin-left:71px;
 
+}
+.modal-container{
+    position:fixed; 
+    top: 0;
+    left: 0;
+    display:flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.8);
+    z-index:4;
+    display:none;
+    /* скрыл модальное окно */
+}
+.modal-content{
+    position:relative;
+}
+.modal{
+    position: relative;
+    margin: auto;
+    padding: 40px;
+    background-color: #FFFFFF;
+}
+.modal-auth{
+    width:575px;
+    height: 429px;
+    border-radius: 30px;
+}
+.modal-close-button{
+    position: absolute;
+    padding: 0;
+    top: 54px;
+    right: 70px;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background-color: #F2F2F2;
+    border: none;
+    background-image: url("../images/close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+} 
+.modal-title{
+    font-family: "PT Sans",sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #000000;
+    height: 67px;
+    margin-bottom:32px;
+    margin-top:22px;
+}
+.field{
+    font-family:"PT Sans",sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+    align-items: center;
+    color: #000000;
+    align-self:center;
+}
+.modal-content-label{
+    width:155px;
+}
+.modal-content-label[for="adult"]{
+}
+.modal-content-label[for="baby"]{
+    margin-left:56px;
+    width:54px; 
+}
+.field-group{
+    position:relative;
+    display:flex;
+    margin:0;
+}
+.auth-form-field{
+    width: 401px; 
+    height:50px;
+    border:none;
+    background: #F2F2F2;
+    border-radius: 4px;
+    margin:0;
+    padding:0;
+    padding-left:19px;
+}
+.field-group + .field-group{
+    margin-top:40px;
+}    
+.calendar-button{
+    position:absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image:url("../images/check-in-out.svg");
+    left:549px;
+    top:18px;
+    background:#000000;
+    opacity:0.3;
+    border:none;
+    padding:0;
+}
+.more-inf{
+    position:absolute;
+    left:398px;
+    top:12px;
+    color:#FFFFFF;
+    background: #83B3D3;
+    border:none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.more-inf-popover{
+    position:absolute;
+    background: #333333;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 256px;
+    height: 143px;
+    left:283px;
+    display:none;
+    /* отключил подсказку-поповер */
+
+}
+.more-inf-popover-content{
+    padding:15px 18px 18px 22px;
+    font-family: "PT Sans",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    width: 216px;
+    display:block;
+    margin:0;
+    
+}
+.modal-title-wrong-answer{
+    margin:0;
+    margin-left:170px;
+    width: 420px;
+    height: 29px;
+    font-family: "PT Sans",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+#red-p{
+    color: #FF5757;
+}
+.number-of-people{
+    font-family: "PT Sans",sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color:#000000;
+    width: 133px;
+    height: 50px;
+    background: #F2F2F2;
+    border-radius: 4px;
+    border:none;
+    padding:0;
+}
+.number-of-people[placeholder="1"]{
+    margin-left:43px;
+}
+.modal-content-button{
+    border:none;
+    position:absolute;
+    background-color:#000000;
+    opacity: 0.3;
+    width:13px;
+    height:1px;
+}
+.adult-minus{
+    position:absolute;
+    left:174px;
+    top:24px;
+}
+.adult-plus{
+    position:absolute;
+    right:306px;
+    top:24px;
+}
+.baby-minus{
+    position:absolute;
+    left:466px;
+    top:24px;
+}
+.baby-plus{
+    position:absolute;
+    left:542px;
+    top:24px;
+}
+.baby-plus::after{
+    content:"";
+    background-color: #000000;
+    width:13px;
+    height:2px;
+    position:absolute;
+    transform: rotate(90deg); 
+    top:0px;
+    right:0px;
+}
+.adult-plus::after{
+    content:"";
+    background-color: #000000;
+    width:13px;
+    height:2px;
+    position:absolute;
+    transform: rotate(90deg); 
+    top:0px;
+    right:0px;
+}
+.modal-submit{
+    width: 575px;
+    font-family: "PT Sans",sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color:#FFFFFF;
+    background: #83B3D3;
+    border-radius: 10px;    
+    padding:0;
+    padding:20px 257px;
+    border:none;
+    
 }
