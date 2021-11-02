@@ -1076,8 +1076,10 @@ header .catalog-filter-list{
 .breadcrumbs-link_svg{
     margin-right:26px;
 }
-.blabla::after{ 
+.breadcrumbs-link_svg::after{ 
     position:absolute;
+    left:0;
+    top:0;
     background-image:url("../images/nav-link.png");
     content:"";
 
