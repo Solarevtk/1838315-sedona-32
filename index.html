@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body class="index-body">
+    <!-- header -->
     <header class="page-header">
+      <!-- навигация -->
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -19,161 +21,156 @@
             <a class="navigation-link" href="hotels.html">Гостиницы</a>
           </li>
         </ul>
-          <img class="logo-nav" src="images/sedona-nav.png" alt="лоотип в навигации">
+          <img class="logo-nav" src="images/svg/sedona-nav.png" alt="лоотип в навигации">
         <ul class="navigation-user navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <img class="search" src="images/search.svg" alt="кнопка поиска">
+              <img class="search" src="images/svg/search.svg" alt="кнопка поиска">
             </a>
           </li>
           <li class="navigation-item">
+            <a class="navigation-link" href="">
               <button class="popover-close-button ">
-              <img class="sedona-like" src="images/like-vector.svg" alt="Кнопка оценить">
-              <!-- кнопка закрытия поповера -->
-            </button>
+              <img class="sedona-like" src="images/svg/like-vector.svg" alt="Кнопка оценить">
+              <!-- кнопка закрытия/открытия поповера -->
+              </button>
+            </a>
+          </li>
             <!-- поповер -->
              <div class="popover popover-cart"> 
               <div class="popover-content">
-                
                 <ul class="cart-items-list">
                   <li class="cart-item">
-                    <img class="cart-item-image" src="images/hotel-1-small.png" alt="фото мотеля">
-                    <p class="cart-item-title">Desert Quail Inn</p>
-                    <p class="cart-item-type-hotel">Мотель</p>
+                    <!-- <a class="cart-item-block" href="#"> -->
+                    <img class="cart-item-image cart-item-child" src="images/index/hotel-1-small.png" alt="фото мотеля">
+                    <p class="cart-item-title cart-item-child">Desert Quail Inn</p>
+                    <p class="cart-item-type-hotel cart-item-child">Мотель</p>
+                    <!-- </a> -->
                     <button type="button" class="cart-item-button button">
-                      <img  src="images/delete-svg.svg" alt="корзина">
+                      <img  class="basket" src="images/svg/delete-svg.svg" alt="корзина">
                     </button> 
                   </li>
                   <li class="cart-item">
-                    <img class="cart-item-image" src="images/hotel-2-small.png" alt="фото апартаментов"
+                    <img class="cart-item-image cart-item-child" src="images/index/hotel-2-small.png" alt="фото апартаментов"
                     style="border:none">
-                    <p class="cart-item-title">Villas at Poco Diablo</p>
-                    <p class="cart-item-type-hotel">Апартаменты</p>
+                    <p class="cart-item-title cart-item-child">Villas at Poco Diablo</p>
+                    <p class="cart-item-type-hotel cart-item-child">Апартаменты</p>
                     <button type="button" class="cart-item-button button">
-                      <img  src="images/delete-svg.svg" alt="корзина">
+                      <img  class="basket" src="images/svg/delete-svg.svg" alt="корзина">
                     </button>
                     </li>
+                    <li class="cart-item-link">
+                    <a class="popover-title-link" href="#">
                     <h2 class="popover-title">Все Избранные</h2>
+                  </li>
+                  </a>
                 </ul>
               </div>
-             </div> 
-          </li>
+            </div> 
           <li class="navigation-item ">
             <a class="here-button" href="navigation-button.html">Хочу Сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class=" main-container">
+    <!-- main -->
+    <main class="main-container">
       <div class="white-block">
         <div class="logo-block">
-      <h1 class="logo-h1">Седона — небольшой городок в Аризоне,<br>
-        заслуживающий большего!</h1>
-        <p class="p-logo">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-      </div>
+          <h1 class="logo-h1">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
+          <p class="p-logo">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
       </div>
       <div class="page-container">
-    <section class="block block-number-one">
-      <h2 class="h2-block_white">Настоящий 
-        городок</h2>
-        <p class="block-number_p">— №1 —</p>
-        <p class="block-number_p">Седона — не аттракцион <br>для туристов, там течёт <br>
-          своя жизнь</p>
-    </section>
+        <!-- блоки с информацией о седоне -->
+        <section class="block block-number-one">
+          <h2 class="h2-block_white">Настоящий городок</h2>
+          <p class="block-number_p">— №1 —</p>
+          <p class="block-number_p">Седона — не аттракцион <br>для туристов, там течёт <br>своя жизнь</p>
+        </section>
     
-    <img class="photo-center-city " src="images/center-city-sedona.jpg" alt="Фотография центра города">
-    <section class="hotels   block">
-      <img class="hotels-svg" src="images/HOTELS.svg" alt="фото отеля">
-      <h2 class="h2-block_svg">Жильё</h2>
-      <p class="number-block-p">Рекомендуем пожить <br>
-        в настоящем мотеле, <br>
-        всё как в кино!</p>
-    </section>
-    <section class="food block">
-      <img class="food-svg" src="images/burger.svg">
-      <h2 class="h2-block_svg">Еда</h2>
-      <p class="number-block-p">Всегда заказывайте<br>
-        топовый фирменный бургер, вы не разочаруетесь!</p>
-    </section>
-    <section class="souvenirs   block">
-      <img class="souvenirs-svg" src="images/podarok.svg">
-      <h2 class="h2-block_svg">Сувениры</h2>
-      <p class="number-block-p">Не только китайского, <br>
-        но и настоящего местного производства!</p>
-    </section>
-    <img class="photo-mountain" src="images/mountain-sedona-photo.jpg" alt="Фоторгафия гор">
-    <section class="block ">
-      <h2 class="h2-block_white">Там есть
-        мост дьявола</h2>
-        <p class="block-number_p">— №2 —</p>
-      <p class="block-number_p">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-    </section>
-    <section class="block block-attractions ">
-      <h2 class="h2-block">Небольшая
-        площадь</h2>
-        <p class="number-block">— №3 —</p>
-        <p class="number-block-p">Все достопримечательности 
-          находятся очень близко</p>
-    </section>
-    <section class="block-road block">
-        <h2 class="h2-block">Красивая
-          дорога</h2>
-        <p class="number-block">— №4 —</p>
-        <P class="number-block-p">Ехать в Седону из Лас-Вегаса совсем не скучно!</P>
-    </section>
-    <section class="block-tourist  block">
-      <h2 class="h2-block">Мало
-        туристов
-        </h2>
-      <p class="number-block">— №5 —</p>
-      <p class="number-block-p">Большинство едет в Гранд Каньон и толпится там</p>
-    </section>
-    <div class="sedona-hotels-block">
-    <h2 class="sedona-hotels-block-h2">Заинтересовались?</h2>
-      <p class="sedona-hotels-block-p">Укажите предполагаемые даты поездки,<br>
-        и мы покажем вам лучшие предложения гостиниц в Седоне
-        </p>
-        <a class="search-hotels" href="#">ПОИСК ГОСТИНИЦЫ В седоне</a>
-      </div>
+        <img class="photo-center-city " src="images/index/center-city-sedona.jpg" alt="Фотография центра города">
+        <section class="hotels   block">
+          <img class="hotels-svg" src="images/svg/HOTELS.svg" alt="фото отеля">
+          <h2 class="h2-block_svg">Жильё</h2>
+          <p class="number-block-p">Рекомендуем пожить <br>в настоящем мотеле, <br>всё как в кино!</p>  
+        </section>
+        <section class="food block">
+          <img class="food-svg" src="images/svg/burger.svg">
+          <h2 class="h2-block_svg">Еда</h2>
+          <p class="number-block-p">Всегда заказывайте<br> топовый фирменный бургер, вы не разочаруетесь!</p>
+        </section>
+        <section class="souvenirs   block">
+          <img class="souvenirs-svg" src="images/svg/podarok.svg">
+          <h2 class="h2-block_svg">Сувениры</h2>
+          <p class="number-block-p">Не только китайского, <br> но и настоящего местного производства!</p>
+        </section>
+        <img class="photo-mountain" src="images/index/mountain-sedona-photo.jpg" alt="Фоторгафия гор">
+        <section class="block">
+          <h2 class="h2-block_white">Там есть мост дьявола</h2>
+          <p class="block-number_p">— №2 —</p>
+          <p class="block-number_p">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+        </section>
+        <section class="block block-attractions ">
+          <h2 class="h2-block">Небольшая площадь</h2>
+          <p class="number-block">— №3 —</p>
+          <p class="number-block-p">Все достопримечательности находятся очень близко</p>
+        </section>
+        <section class="block-road block">
+          <h2 class="h2-block">Красивая дорога</h2>
+          <p class="number-block">— №4 —</p>
+          <p class="number-block-p">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </section>
+        <section class="block-tourist  block">
+          <h2 class="h2-block">Мало туристов</h2>
+          <p class="number-block">— №5 —</p>
+          <p class="number-block-p">Большинство едет в Гранд Каньон и толпится там</p>
+        </section>
+        <!-- блок с поиском гостиниц -->
+        <div class="sedona-hotels-block">
+          <h2 class="sedona-hotels-block-h2">Заинтересовались?</h2>
+          <p class="sedona-hotels-block-p">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <a class="search-hotels" href="#">Поиск гостиницы В Седоне</a> 
+        </div>
+        <!-- блок с рассылкой -->
         <div class="mailing-index">
           <h1 class="mailing-h1">Подпишитесь на рассылку</h1>
-          <p class="mailing-p">Только полезная информация и никакого спама,<br>
-            честное бойскаутское!</p>
-              <form action="" method="post">
-                <div class="mail-button-block">
-            <input  class="mail-button" placeholder="Ваш e-mail" id="email-button">
-            <label class="for-email-button" for="email-button">Подписаться</label>
-          </form>
+          <p class="mailing-p">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+          <form action="" method="post">
+            <div class="mail-button-block">
+              <input  class="mail-button" placeholder="Ваш e-mail" id="email-button">
+              <label class="for-email-button" for="email-button">Подписаться</label>
+            </form>
           </div>
-          </div>
-    </div>
-    
-    </main>
+        </div>    
+      </main>
+      <!-- footer -->
     <footer class="page-footer">
       <div class="footer-container">
         <ol class="footer-social-list">
           <li class="footer-social-item">
-            <a class="button" href="#">
-              <img src="images/twitter.svg" alt="telegram сайта">
+            <a class="social-button" href="#">
+              <img class="social-image" src="images/svg/twitter.svg" alt="telegram сайта">
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="#">
-              <img src="images/social-facebook.svg" alt="facebook сайта">
+            <a class="social-button" href="#">
+              <img class="social-image" src="images/svg/social-facebook.svg" alt="facebook сайта">
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="#">
-              <img src="images/social-youtube.svg" alt="YouTube сайта">
+            <a class="social-button" href="#">
+              <img class="social-image" src="images/svg/social-youtube.svg" alt="YouTube сайта">
             </a>
           </li>
         </ol>
         <a class="telefon" href="+7 (812) 812-12-12">+7 (812) 812-12-12</a>
         <div class="htmlacademy-block">
-        <img class="htmlacademy-image" src="images/htmlacademy.svg" alt="htmlacademt сайт">
+        <img class="htmlacademy-image" src="images/svg/htmlacademy.svg" alt="htmlacademt сайт">
       </div>
     </div>
   </footer>
+  <!-- модальное окно -->
   <div class="modal-container">
     <div class="modal modal-auth">
       <button class="modal-close-button">
@@ -187,41 +184,35 @@
             <label class="modal-content-label field" for="check-in-date">Дата заезда:</label>
             <input class="auth-form-field field" type="text" id="check-in-date" name="auth-login" placeholder="ЧЧ/ММ/ГГ">
             <button type="button" class="calendar-button"></button>
-            <!-- параграф скрыт visually-hidden -->
-            <p class=" visually-hidden modal-title-wrong-answer" id="red-p">Мы не можем отправить вас в прошлое.</p>
+            <!-- параграф скрыт в CSS с помощью display:none -->
+            <p class="modal-title-wrong-answer" id="red-p">Мы не можем отправить вас в прошлое.</p>
           </p>
           <p class="field-group">
             <label class="modal-content-label field" for="check-out-date">Дата выезда:</label>
             <input class="auth-form-field field" type="text" id="check-out-date" name="auth-login" placeholder="ЧЧ/ММ/ГГ">
             <button type="button" class="calendar-button"></button>
-            <!-- параграф скрыт visually-hidden -->
-            <p class=" visually-hidden modal-title-wrong-answer">На эти даты есть свободные номера. Пока есть.</p>
+            <!-- параграф скрыт в CSS с помощью display:none -->
+            <p class="modal-title-wrong-answer">На эти даты есть свободные номера. Пока есть.</p>
           </p>
           <!-- Раздел Взрослые: -->
           <p class="field-group" id="block-adult-baby">
             <label class="modal-content-label field" for="adult">Взрослые:</label>
             <button type="button" class="adult-minus modal-content-button"></button>
-            <input  class="number-of-people"type="text" placeholder="2">
+            <input  class="number-of-people"type="number" placeholder="2">
             <button type="button" class="adult-plus modal-content-button"></button>
             <!-- раздел Дети: -->
             <label class="modal-content-label field" for="baby">Дети:</label>
             <button type="button" class="more-inf">i</button> 
             <button type="button" class="baby-minus modal-content-button"></button>  
-            <input  class="number-of-people"type="text" placeholder="1">
+            <input  class="number-of-people"type="number" placeholder="1">
             <button type="button" class="baby-plus modal-content-button"></button> 
             <div class="more-inf-popover"> <!-- подсказка отключена в CSS -->
-              <p class="more-inf-popover-content">
-                Укажите количество детей, которые
-                будут с вами, возраст <br> которых от 6
-                до 18 лет. Дети до 6 лет
-                размещаются бесплатно.
-              </p>
+              <p class="more-inf-popover-content">Укажите количество детей, которые будут с вами, возраст <br> которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
             </div>
-          </p>
-          <button type="submit" class="modal-submit">Найти</button>
-        </form>
-      </section>
+            <button type="submit" class="modal-submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
-  </div>
   </body>
 </html>
