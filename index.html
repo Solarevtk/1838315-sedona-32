@@ -28,12 +28,10 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="">
               <button class="popover-close-button ">
               <img class="sedona-like" src="images/svg/like-vector.svg" alt="Кнопка оценить">
               <!-- кнопка закрытия/открытия поповера -->
               </button>
-            </a>
           </li>
             <!-- поповер -->
              <div class="popover popover-cart"> 
@@ -61,8 +59,8 @@
                     <li class="cart-item-link">
                     <a class="popover-title-link" href="#">
                     <h2 class="popover-title">Все Избранные</h2>
+                    </a>
                   </li>
-                  </a>
                 </ul>
               </div>
             </div> 
@@ -95,12 +93,12 @@
           <p class="number-block-p">Рекомендуем пожить <br>в настоящем мотеле, <br>всё как в кино!</p>  
         </section>
         <section class="food block">
-          <img class="food-svg" src="images/svg/burger.svg">
+          <img class="food-svg" src="images/svg/burger.svg" alt="фото бургера">
           <h2 class="h2-block_svg">Еда</h2>
           <p class="number-block-p">Всегда заказывайте<br> топовый фирменный бургер, вы не разочаруетесь!</p>
         </section>
         <section class="souvenirs   block">
-          <img class="souvenirs-svg" src="images/svg/podarok.svg">
+          <img class="souvenirs-svg" src="images/svg/podarok.svg" alt="фото сувенира">
           <h2 class="h2-block_svg">Сувениры</h2>
           <p class="number-block-p">Не только китайского, <br> но и настоящего местного производства!</p>
         </section>
@@ -140,13 +138,14 @@
             <div class="mail-button-block">
               <input  class="mail-button" placeholder="Ваш e-mail" id="email-button">
               <label class="for-email-button" for="email-button">Подписаться</label>
+              </div>
             </form>
           </div>  
       </main>
       <!-- footer -->
     <footer class="page-footer">
       <div class="footer-container">
-        <ol class="footer-social-list">
+        <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="social-button" href="#">
               <img class="social-image" src="images/svg/twitter.svg" alt="telegram сайта">
@@ -162,8 +161,8 @@
               <img class="social-image" src="images/svg/social-youtube.svg" alt="YouTube сайта">
             </a>
           </li>
-        </ol>
-        <a class="telefon" href="+7 (812) 812-12-12">+7 (812) 812-12-12</a>
+        </ul>
+        <a class="telefon" href="+7(812)812-12-12">+7 (812) 812-12-12</a>
         <div class="htmlacademy-block">
         <img class="htmlacademy-image" src="images/svg/htmlacademy.svg" alt="htmlacademt сайт">
       </div>
@@ -197,13 +196,13 @@
           <p class="field-group">
             <label class="modal-content-label field" for="adult">Взрослые:</label>
             <button type="button" class="adult-minus modal-content-button"></button>
-            <input  class="number-of-people"type="number" placeholder="2">
+            <input  class="number-of-people" type="number" placeholder="2" id="adult">
             <button type="button" class="adult-plus modal-content-button"></button>
             <!-- раздел Дети: -->
             <label class="modal-content-label field" for="baby">Дети:</label>
             <button type="button" class="more-inf">i</button> 
             <button type="button" class="baby-minus modal-content-button"></button>  
-            <input  class="number-of-people"type="number" placeholder="1">
+            <input  class="number-of-people" type="number" placeholder="1" id="baby">
             <button type="button" class="baby-plus modal-content-button"></button> 
             <div class="more-inf-popover"> <!-- подсказка отключена в CSS -->
               <p class="more-inf-popover-content">Укажите количество детей, которые будут с вами, возраст <br> которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>

@@ -107,9 +107,7 @@ body{
     text-transform: uppercase;
 }
 .p-logo {
-    position: absolute;
     width: 720px;
-    height: 37px;
     font-family: "PT Sans";
     font-style: normal;
     font-weight: normal;
@@ -118,6 +116,7 @@ body{
     text-align: center;
     color: #333333;
     text-transform: none;
+    padding:0;
     margin:0;
 }
 .navigation {
@@ -196,7 +195,7 @@ body{
     border-radius: 0px 0px 20px 20px;
 }
 .popover-title:active{
-    opacity:0.3;
+    color: rgba(255, 255, 255, 0.3);
 }
 .cart-item{
     display:grid;
@@ -217,7 +216,7 @@ body{
     border-radius: 10px;
 }
 .cart-item-button:active{
-    opacity:0.1;
+    color: rgba(255, 255, 255, 0.3);
 }
 /* .cart-item-block{
     display:flex;
@@ -336,18 +335,23 @@ body{
     box-sizing: border-box;
     border-radius: 10px;
     padding: 6px 12px;
+    align-self:center;
 }
 .page-header{
     min-height:65px;
 }
 .navigation-link:active {
-    opacity:0.3;
+    color: rgba(0, 0, 0, 0.3);
 }
 .popover-close-button {
     outline:none;
     background:none;
     border:none;
-    padding:0;
+    padding:18px 20px 24px 1px;
+}
+.popover-close-button:hover{
+    color:rgba(117, 98, 87, 1);
+
 }
 .navigation-item {
     position:relative;
@@ -385,7 +389,7 @@ body{
     border-radius: 4px;
 }
 .here-button:active {
-    opacity: 0.3;
+    color: rgba(255, 255, 255, 0.3);
     background-color:#615048;
 }
 .mailing-index {
@@ -448,8 +452,6 @@ body{
 }
 .hotels {
     background: rgba(131, 179, 211, 0.12); 
-    margin: 0;
-    padding: 0;
     color:#ffffff;
     text-align: center;;
 }
@@ -480,7 +482,7 @@ body{
     height: 48px;
     align-items:center;
     margin-bottom:74px;
-    margin-top:32px;
+    margin-top:126px;
 }
 .h2-sorting-block {
     position:relative;
@@ -513,16 +515,16 @@ body{
     border: 2px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 4px;
-    padding:11px 100px 12px 19px;
+    padding:8px 100px 10px 18px;
     margin:0; 
-    top:3px;
+    bottom:0px;
     appearance: none;
 }
 .sorting-block::after{
     position:absolute;
     content: "";
     left:854px;
-    top:24px;
+    top:22px;
     background:url("../images/svg/dropdown.svg");
     width:12px;
     height:7px;
@@ -551,7 +553,7 @@ body{
     margin:0;
     padding-top:55px;
     padding-left:71px;
-    
+    margin-bottom:91px;
 }
 .catalog-filter-title {
     font-family: "PT sans",sans-serif;
@@ -644,8 +646,6 @@ body{
 .catalog-filter-list .catalog-filter:first-child{
     margin-top:2px;
 }
-.catalog-filter-list .catalog-filter:last-child{
-}
 .catalog-filter-input_from-to {
     width: 20px;
     height: 23px;
@@ -728,7 +728,7 @@ body{
 .white-block {
     background-color:#ffffff;
     width: 1200px;
-    height: 288px;
+    min-height: 288px;
     left: 40px;
     top: 550px;
     margin: 0;
@@ -741,7 +741,7 @@ body{
 .logo-block {
     margin: 0 auto;
     width:720px;
-    padding:63px 240px 139px;
+    padding:63px 240px 0px;
     margin-top:480px;
 }
 .h2-block {
@@ -784,11 +784,10 @@ body{
     font-style: normal;
     font-size: 24px;
     line-height: 28px;
-    text-align: center; 
 }
 .block-number_p {
     width: 220px;
-    height: 23px;
+    min-height: 23px;
     font-family: "PT Sans",sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -934,7 +933,7 @@ body{
     border-radius: 10px;
 }
 .search-hotels:active {
-    opacity: 0.3;
+    color: rgba(255, 255, 255, 0.3);
 }
 .mailing-h1 {
     font-family: "PT sans",sans-serif;
@@ -1017,7 +1016,7 @@ body{
 }
 .for-email-button:active {
     background: #68A2CA;
-    opacity: 0.3;
+    color: rgba(255, 255, 255, 0.3);
 }
 .page-footer {
     margin:0 auto;
@@ -1035,12 +1034,13 @@ body{
     height:120px;
 }
 .footer-social-list {
-    margin: 0;
-    padding: 0;
+    width:100px;
     list-style-type: none;
     display:flex;
     flex-wrap:wrap;
     align-self:center;
+    margin: 0;
+    padding: 0;
     margin-left:72px;
 }
 .footer-social-item {
@@ -1071,7 +1071,7 @@ body{
     border-radius: 10px;
 }
 .social-button:active{
-    opacity: 0.3;
+    color: rgba(104, 163, 202, 0.3);
 }
 .telefon {
     position:relative;
@@ -1098,7 +1098,7 @@ body{
     outline:none;
 }
 .telefon:active{
-    opacity:0.3;
+    color: rgba(0, 0, 0, 0.3);
 }
 .htmlacademy-block{
     width:115px;
@@ -1117,7 +1117,7 @@ body{
     border: 3px solid #83B3D3;
 }
 .htmlacademy-block:active{
-    opacity:0.3;
+    color: rgba(0, 0, 0, 0.3);
 }
 .text-sorting {
     font-family: "PT sans",sans-serif;
@@ -1216,12 +1216,13 @@ body{
 }
 .block {
     width:400px;
-    height: 384px;
+    min-height: 384px;
     margin:0;
     padding:0;
     display:flex;
     flex-direction: column;
     flex-wrap:wrap;
+    text-align:center;
 }
 .photo-center-city {
     width: 800px;
@@ -1245,8 +1246,8 @@ body{
 .breadcrumbs::after{
     position:relative;
     content:"";
-    left:-5px;
-    top:30px;
+    left:25px;
+    top:25px;
     background:url("../images/svg/nav-link.svg");
     width:5px;
     height:8px;
@@ -1273,14 +1274,18 @@ body{
     height: 21px;
     padding-left:13px;
     text-decoration: none;
-    top:1px;
+    top:-3px;
     right:1px;
 }
 .catalog-filter-list {
+    display: flex;
     list-style-type: none;
-    margin:0;
-    padding:0;
-    padding-bottom:81px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 148px;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .catalog-filter-list:not(.catalog-filter-list:nth-child(2)):not(.breadcrumbs){
     margin-left:2px;
@@ -1292,7 +1297,7 @@ body{
     padding-bottom:0;
 }
 .breadcrumbs-link:hover{
-    opacity:0.6;
+    color: rgba(255, 255, 255, 0.6);
 }
 .breadcrumbs-link:focus{
     outline:none;
@@ -1331,7 +1336,7 @@ body{
     border: 3px solid #FFFFFF;
 }
 .button-use:active{
-    opacity:0.3;
+    color: rgba(255, 255, 255, 0.3);
 }
 .button-repeat{
     position: absolute;
@@ -1349,7 +1354,7 @@ body{
     
 }
 .button-repeat:hover{
-    opacity:0.6;
+    color: rgba(255, 255, 255, 0.6);
 }
 .button-repeat:focus{
     outline:none;
@@ -1358,7 +1363,7 @@ body{
     padding:4px 3px;
 }
 .button-repeat:active{
-    opacity:0.3;
+    color: rgba(255, 255, 255, 0.3);
 }
 .range{
     margin-left:10px;
@@ -1366,19 +1371,14 @@ body{
 .range-scale{
     margin-top:29px;
     height:4px;
-    background-color:#FFFFFF;
+    background-color:rgba(255, 255, 255, 0.3);
     position:relative;
     width:274px;
-}
-.range-scale:not(.range-bar){
-    /* opacity:0.3; */
 }
 .range-bar{
     position: absolute;
     height:4px;
     background-color: #FFFFFF;
-    opacity:1;
-    /* почему не работает opacity 1? */
 }
 .range-toggle{
     position: absolute;
@@ -1419,7 +1419,7 @@ body{
     height:46px;
 }
 .range-wrapper-inputs:hover{
-    opacity: 0.6;
+    border-color:rgba(255, 255, 255, 0.6)
 }
 .range-wrapper-inputs:focus{
     box-shadow: 0px 0px 0px 3px #81B3D2;
@@ -1470,9 +1470,9 @@ body{
     transform: rotate(90deg);
 }
 .elected-button{
+    position:absolute;
     background: #83B3D3;
     border-radius: 4px;
-    align-self:end;
     font-family: "PT Sans",sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -1483,10 +1483,11 @@ body{
     color:#FFFFFF;
     padding-top:8px;
     padding-bottom:8px;
-    grid-column:4/5;
-    grid-row:2/3;
     width:160px;
     text-decoration: none;
+    display:block;
+    margin-top:57px;
+    margin-left:159px;
 }
 .elected-button:not(.elected-button[href=""]):hover{
     background: #68A2CA;
@@ -1513,16 +1514,17 @@ body{
     border: 1px solid #756257;
     box-sizing: border-box;
     border-radius: 4px;
-    opacity: 0.3;
+    color:rgba(255, 255, 255, 0.3)
 }
 .elected-button[href=""]:focus{
     background:#6C9E42;
-    opacity:0.3;
+    color:rgba(255, 255, 255, 0.3)
 }
 .elected-button[href=""]{
     background: #7DB54F;
 }
 .detailed-button{
+    position:absolute;
     font-family: "PT Sans",sans-serif;
     color:#FFFFFF;
     font-style: normal;
@@ -1534,16 +1536,14 @@ body{
     text-decoration:none;
     background: #756257;
     border-radius: 4px;
-    grid-column:3/4;
-    grid-row:2/3;
-    margin-right:8px;
-    align-self:end;
     padding-top:9px;
     padding-bottom:8px;
     width:151px;
+    margin-top:57px;
+    display:block;
 }
 .detailed-button:hover{
-    background: #615048;
+    color: #615048;
 }
 .detailed-button:focus{
     outline:none;
@@ -1553,7 +1553,7 @@ body{
 }
 .detailed-button:active{
     background:#615048;
-    opacity:0.3;
+    color:rgba(255, 255, 255, 0.3)
 }
 .product-card {
     position:relative;
@@ -1588,18 +1588,20 @@ body{
 .product-card-link:active{
     opacity:0.3;
 }
+.product-card-information-block{
+    grid-row:1/3;
+    grid-column:3/5;
+}
 .product-card-title {
     font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
-    grid-column:3/5;
-    grid-row:1/2;
     display:flex;
     text-decoration: none;
     color:#000000;
     align-self:flex-start;
-    margin-top:-5px;
+    margin-top:-3px;
 }
 .product-card-title:hover{
     color: #756257;
@@ -1612,21 +1614,19 @@ body{
     width:239px;
 }
 .product-card-title:active{
-    opacity:0.3;
+    color:rgba(255, 255, 255, 0.3)
 }
 .product-card-price {
+    position:absolute;
     font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height:20px;
     color:#333333;
-    display:flex;
-    grid-row:1/2;
-    grid-column:3/5;
-    align-self:end;
     margin:0;
     padding:0;
+    margin-top:4px;
 }
 .product-card-price + .product-card-price{
     margin-left:158px;
@@ -1702,7 +1702,7 @@ body{
     border: 3px solid #756257;
 }
 .pagination-link:not(#gray-block):active{
-    opacity: 0.3;
+    color:rgba(255, 255, 255, 0.3)
 }
 .modal-container{
     position:fixed; 
@@ -2012,5 +2012,5 @@ body{
 }
 .modal-sumbit:active{
     background:#68A2CA;
-    opacity:0.3;
+    color:rgba(255, 255, 255, 0.3)
 }
