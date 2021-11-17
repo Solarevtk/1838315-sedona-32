@@ -188,7 +188,7 @@ body{
 .popover-title:hover{
     background: #615048;
 }
-.popover-title-link:focus{
+.popover-title-link:focus-visible{
     outline:3px solid #83B3D3;
     background: #615048;;
     border-radius: 0px 0px 20px 20px;
@@ -206,12 +206,12 @@ body{
     margin:0;
     padding:0;
     display:flex;
-    grid-columns:1/3;   
+    grid-column:1/3;   
 }
 .cart-item-block:hover{
     opacity:0.6;
 }
-.cart-item-block:focus{
+.cart-item-block:focus-visible{
     outline: 3px solid #83B3D3;
     box-sizing: border-box;
     border-radius: 10px;
@@ -219,8 +219,8 @@ body{
 .cart-item-block:active{
     opacity:0.3;
 }
-.cart-tiem-block:focus{
-    outline:border: 3px solid #83B3D3;
+.cart-tiem-block:focus-visible{
+    outline: 3px solid #83B3D3;
     box-sizing: border-box;
     border-radius: 10px;
 }
@@ -234,7 +234,7 @@ body{
 .cart-item-button:hover svg{
     fill:black;
 }
-.cart-item-button:focus svg{
+.cart-item-button:focus-visible svg{
     outline: 3px solid #83B3D3;
     border-radius: 10px;
 }
@@ -358,7 +358,7 @@ body{
 .navigation-link:hover {
     color:#756257;
 }
-.navigation-link:focus {
+.navigation-link:focus-visible {
     outline:3px solid #83B3D3;;
     box-sizing: border-box;
     border-radius: 10px;
@@ -405,7 +405,7 @@ body{
 .popover-close-button:hover svg{
     fill:rgba(117, 98, 87, 1);
 }
-.popover-close-button:focus svg{
+.popover-close-button:focus-visible svg{
     outline: 3px solid #83B3D3;
     fill:rgba(117, 98, 87, 1);
     border-radius: 10px;
@@ -452,7 +452,7 @@ body{
 .here-button:hover {
     background-color:#615048;
 }
-.here-button:focus {
+.here-button:focus-visible {
     outline:3px solid #83B3D3;
     border-radius: 4px;
 }
@@ -602,7 +602,7 @@ body{
     box-sizing: border-box;
     border-radius: 4px;
 }
-.sorting-type .select-control:focus{
+.sorting-type .select-control:focus-visible{
     outline: 2px solid #83B3D3;
     box-sizing: border-box;
     border-radius: 4px;
@@ -653,15 +653,22 @@ body{
 .catalog-filter-group:first-child .control-mark{
     left:2px;
 }
-.control-input:focus ~ .control-mark::after{
+/* .control-input::after{
     position:absolute;
     content:"";
     background:red;
-}
+    left:0px;
+    top:0px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 3px solid #83B3D3;
+    border-radius: 4px;
+    width:50px;
+    height:10px;
+} */
 .control-input[type="checkbox"] + .control-mark:hover{
     opacity:0.6;
 }
-.control-mark:focus{
+.control-mark:focus-visible{
     background: rgba(255, 255, 255, 0.6);
     outline: 3px solid #83B3D3;
 }
@@ -771,7 +778,7 @@ body{
 .mode-title:not(.mode-title-black):hover{
     border: 2px solid #83B3D3;
 }
-.mode-title:not(.mode-title-black):focus{
+.mode-title:not(.mode-title-black):focus-visible{
     outline:none;
     border: 2px solid #83B3D3;
 }
@@ -1001,7 +1008,7 @@ body{
 .search-hotels:hover {
     background: #615048;
 }
-.search-hotels:focus {
+.search-hotels:focus-visible {
     outline:3px solid #83B3D3;
     box-sizing: border-box;
     border-radius: 10px;
@@ -1058,7 +1065,7 @@ body{
 .mail-button:hover {
     background: #E6E6E6;
 }
-.mail-button:focus {
+.mail-button:focus-visible {
     outline:3px solid #83B3D3;
     outline-offset: -3px;
 }
@@ -1084,7 +1091,7 @@ body{
 .for-email-button:hover {
     background: #68A2CA;
 }
-.for-email-button:focus { 
+.for-email-button:focus-visible { 
     outline: 3px solid #756257;
     outline-offset: -3px;
 }
@@ -1132,7 +1139,7 @@ body{
 .social-button:hover svg{
     fill:#68A2CA;
 }
-.footer-social-list:focus svg{
+.footer-social-list:focus-visible svg{
     outline: 3px solid #83B3D3;
     border-radius: 10px;
 }
@@ -1148,7 +1155,7 @@ body{
     right:56px;
     top:4px;
 }
-.social-button:focus {
+.social-button:focus-visible {
     outline:3px solid #83B3D3;;
     box-sizing: border-box;
     border-radius: 10px;
@@ -1173,7 +1180,7 @@ body{
 .telefon:hover {
     color: #756257;
 }
-.telefon:focus {
+.telefon:focus-visible {
     padding: 15px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -1197,7 +1204,7 @@ body{
 .htmlacademy-block:hover svg{
     fill: #756257;
 }
-.htmlacademy-block:focus{
+.htmlacademy-block:focus-visible{
     outline: 3px solid #83B3D3;
     border-radius: 10px;
     
@@ -1238,7 +1245,7 @@ body{
     box-sizing: border-box;
     border-radius: 4px;
 }
-.text-sorting-block .select-control:focus{
+.text-sorting-block .select-control:focus-visible{
     outline: 2px solid #83B3D3;;
     box-sizing: border-box;
     border-radius: 4px;
@@ -1301,7 +1308,7 @@ body{
 .link-download-more:hover{
     background: #68A2CA;
 }
-.link-download-more:focus{
+.link-download-more:focus-visible{
     outline: 3px solid #756257;
     border-radius: 10px;
 }
@@ -1355,10 +1362,16 @@ body{
     margin-left:26px;
 }
 .breadcrumbs-link[href="index.html"]{
-    position:relative;
-    height:2px;
-    padding:3px 8px 6px;
-    right:8px;
+    position:absolute;
+    padding:3px;
+    left:0px;
+    top:0px;
+}
+.breadcrumbs-link svg{
+    fill:rgba(255, 255, 255, 1);
+}
+.breadcrumbs-link[href="index.html"]:hover svg{
+    fill:rgba(255, 255, 255, 0.6)
 }
 .breadcrumbs-link[href=""] {
     position:relative;
@@ -1373,8 +1386,8 @@ body{
     padding-left:13px;
     text-decoration: none;
     top:-3px;
-    left:4px;
-    padding:3px 8px;
+    left:9px;
+    padding:3px;
 }
 .catalog-filter-list {
     display: flex;
@@ -1396,7 +1409,7 @@ body{
 .breadcrumbs-link:hover{
     color: rgba(255, 255, 255, 0.6);
 }
-.breadcrumbs-link:focus{
+.breadcrumbs-link:focus-visible{
     outline:3px solid #83B3D3;;
     box-sizing: border-box;
     border-radius: 4px;
@@ -1426,7 +1439,7 @@ body{
 .button-use:hover{
     background: #68A2CA;
 }
-.button-use:focus{
+.button-use:focus-visible{
     outline:3px solid #FFFFFF;
 }
 .button-use:active{
@@ -1445,12 +1458,11 @@ body{
     background:none;   
     border:none; 
     padding:0;
-    
 }
 .button-repeat:hover{
     color: rgba(255, 255, 255, 0.6);
 }
-.button-repeat:focus{
+.button-repeat:focus-visible{
     outline:3px solid #83B3D3;
     border-radius: 4px;
     padding:4px 3px;
@@ -1485,7 +1497,7 @@ body{
 .range-toggle:hover{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
-.range-toggle:focus{
+.range-toggle:focus-visible{
     border: 3px solid #83B3D3;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
@@ -1501,26 +1513,42 @@ body{
     top:-8px;
     right:-10px;
 }
-.range-wrapper-inputs{
+.range-wrapper-inputs-block{
+    display:flex;
+}
+.range-wrapper-inputs-one{
     position:relative; 
     display:flex;
     margin-top:13px;
-    border: 2px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 4px;
-    width:286px;
+    width:143px;
     height:46px;
     align-items:center;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px 0px 0px 4px;
+    border-right:none;
+}
+.range-wrapper-inputs-two{
+    position:relative; 
+    display:flex;
+    margin-top:13px;
+    width:143px;
+    height:46px;
+    align-items:center;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 0px 4px 4px 0px;
 }
 .range-wrapper-inputs:hover{
     border-color:rgba(255, 255, 255, 0.6)
 }
-.range-wrapper-inputs:focus{
+.range-wrapper-inputs:focus-within{
+    outline: none;
     box-shadow: 0px 0px 0px 3px #81B3D2;
 }
 .range-wrapper-inputs:active{
     background: #756257;
-}
+} 
 .range-input{
     width: 40px;
     font: inherit;
@@ -1541,22 +1569,12 @@ body{
     margin: 0;
 }
 .range-input-one{
-    margin-right:83px;
     width:10px;
-    padding:14px 0px 16px 14px;
+    padding:14px 83px 16px 14px;
 }
 .range-input-two{
     width:40px;
     padding:14px 50px 14px 15px;
-}
-.range-wrapper-inputs::after{
-    content:"";
-    position:absolute;
-    width: 45px;
-    top:20px;
-    left:119px;
-    border-bottom: 2px solid #FFFFFF;
-    transform: rotate(90deg);
 }
 .block-product-card-button{
     display:flex;
@@ -1590,12 +1608,12 @@ body{
 .elected-button[href=""]:hover{
     background: #6C9E42;
 }
-.elected-button:not(.elected-button[href=""]):focus{
+.elected-button:not(.elected-button[href=""]):focus-visible{
     outline:3px solid #756257;
     background: #68A2CA;
     border-radius: 4px;
 }
-.elected-button[href=""]:focus{
+.elected-button[href=""]:focus-visible{
     outline:3px solid #756257;
     background: #6C9E42;
     border-radius: 4px;
@@ -1607,7 +1625,7 @@ body{
     border-radius: 4px;
     color:rgba(255, 255, 255, 0.3)
 }
-.elected-button[href=""]:focus{
+.elected-button[href=""]:focus-visible{
     background:#6C9E42;
     color:rgba(255, 255, 255, 0.3)
 }
@@ -1629,13 +1647,13 @@ body{
     padding-top:9px;
     padding-bottom:8px;
     width:151px;
-    margin-top:57px;
+    margin-top:64px;
     display:block;
 }
 .detailed-button:hover{
     color: #615048;
 }
-.detailed-button:focus{
+.detailed-button:focus-visible{
     outline:3px solid #83B3D3;
     background: #615048;
     border-radius: 4px;
@@ -1669,7 +1687,7 @@ body{
 .product-card-link:hover{
     opacity:0.6;
 }
-.product-card-link:focus{
+.product-card-link:focus-visible{
     outline:3px solid #83B3D3;
 }
 .product-card-link:active{
@@ -1690,15 +1708,15 @@ body{
     color:#000000;
     align-self:flex-start;
     margin-top:-23px;
-    right:16px;
+    right:12px;
     white-space: normal;
-    padding:10px 16px;
-    top:10px;
+    padding:6px 12px;
+    top:14px;
 }
 .product-card-title:hover{
     color: #756257;
 }
-.product-card-title:focus{
+.product-card-title:focus-visible{
     outline:3px solid #83B3D3;
     box-sizing: border-box;
     border-radius: 10px;
@@ -1717,7 +1735,7 @@ body{
     color:#333333;
     margin:0;
     padding:0;
-    margin-top:4px;
+    margin-top:12px;
 }
 .product-card-price + .product-card-price{
     margin-left:158px;
@@ -1786,7 +1804,7 @@ body{
 .pagination-link:not(#gray-block):hover{
     background: #68A2CA;
 }
-.pagination-link:not(#gray-block):focus{
+.pagination-link:not(#gray-block):focus-visible{
     outline: 3px solid #756257;
 }
 .pagination-link:not(#gray-block):active{
@@ -1794,7 +1812,7 @@ body{
 }
 .modal-container{
     position:fixed; 
-    top: 10px;
+    top:0;
     left: 0;
     display:flex;
     width: 100%;
@@ -1802,7 +1820,7 @@ body{
     background-color: rgba(242, 242, 242, 0.8);
     z-index:4;
     /* Модальное окно скрыто */
-    display: none;
+    display:none;
 }
 .modal-content{
     position:relative;
@@ -1837,7 +1855,7 @@ body{
 .modal-close-button:hover{
     background: #E6E6E6;
 }
-.modal-close-button:focus{
+.modal-close-button:focus-visible{
     outline:3px solid #83B3D3;
 }
 .modal-close-button:active{
@@ -1896,7 +1914,7 @@ body{
 .auth-form-field:hover{
     background:#E6E6E6;
 }
-.auth-form-field:focus{
+.auth-form-field:focus-visible{
     outline:3px solid #83B3D3;
     border-radius: 4px;
 }
@@ -1978,6 +1996,7 @@ body{
     display: flex;
     align-items: center;
     color: #333333;
+    top:40px;
     /* Отключил подсказки у неправильного ответа */
     /* display:none; */
 }
@@ -2016,7 +2035,7 @@ body{
 .modal-content-button:hover svg{
     fill:rgba(0, 0, 0, 1)
 }
-.modal-content-button:focus svg{
+.modal-content-button:focus-visible svg{
     outline:3px solid #83B3D3;
     border-radius: 4px;
 }
@@ -2078,7 +2097,7 @@ body{
 .modal-submit:hover{
     background: #68A2CA;
 }
-.modal-submit:focus{
+.modal-submit:focus-visible{
     background: #68A2CA;
     outline: 3px solid #756257;
     border-radius: 10px;

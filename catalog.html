@@ -55,7 +55,10 @@
           <ul class="breadcrumbs catalog-filter-list">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">
-                <img class="main-inner-svg" src="images/svg/main-navigation.svg" alt="Главная">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 0.299988L0 5.79999V12H12V5.79999L6 0.299988ZM11 11H1V6.19999L6 1.69999L11 6.19999V11Z"/>
+                  <path d="M4 10H5V7.5H7V10H8V6.5H4V10Z"/>
+                </svg>               
               </a>
             </li>
             <li class="breadcrumbs-item">
@@ -121,13 +124,16 @@
                       </ul>
                     </fieldset>
           <fieldset class="catalog-filter-group">
-            <div class="range-wrapper-inputs">
-                <input class="range-input range-input-one" type="number" name="min-price" value="0"> <p class="catalog-filter-input_from-to">от</p>
-
-                <input class="range-input range-input-two" type="number" name="max-price" value="9000"> <p class="catalog-filter-input_from-to">до</p>
-            </div>
-          
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+            <section class="range-wrapper-inputs-block">
+              <div class="range-wrapper-inputs range-wrapper-inputs-one">
+                  <input class="range-input range-input-one" type="number" name="min-price" value="0"> <p class="catalog-filter-input_from-to">от</p>
+                </div>
+              <div class="range-wrapper-inputs range-wrapper-inputs-two">
+                  <input class="range-input range-input-two" type="number" name="max-price" value="9000"> <p class="catalog-filter-input_from-to">до</p>
+              </div>
+            </section>
+            
               <div class="range">
                 <div class="range-scale">
                   <div class="range-bar" style="left: 0px; width: 215px">
