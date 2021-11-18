@@ -120,18 +120,15 @@ body{
     margin:0;
 }
 .navigation {
+    position: relative;
     display:flex;
     width:1200px;
     margin:0; 
     z-index:3;
 }
-.navigation::after{
+.logo-sedona{ 
+    left:531px;
     position:absolute;
-    content:"";
-    background:url("../images/svg/sedona-nav.png");
-    width:138px;
-    height:70px;
-    margin-left:531px;
     z-index:3;
 }
 .popover{
@@ -327,7 +324,7 @@ body{
 .navigation-user .navigation-link[href="#"]{
     padding:4px 4px 2px 4px;
     margin-top:18px;
-    margin-left:53px;
+    margin-left:56px;
 }
 .navigation-user .navigation-link[href="#"]:hover svg{
     fill:#756257;
@@ -352,12 +349,12 @@ body{
 .navigation-link[href="hotels.html"]{
     margin-top:12px;
 }
-.catalog-body .navigation-link[href="hotels.html"]::after{
+.catalog-body .navigation-link[href=""]::after{
     position: absolute;
     content:"";
     border-bottom:2px solid #756257;
     width:93px;
-    left:362px;
+    left:287px;
     top:64px;
 }
 .navigation-link[href="about-sedona.html"]{
@@ -371,10 +368,10 @@ body{
 .navigation-user .navigation-item:nth-child(2){
     width:70px;
 }
-.navigation-link:hover {
+.navigation-link:not(.navigation-link[href=""]):hover {
     color:#756257;
 }
-.navigation-link:focus-visible {
+.navigation-link:not(.navigation-link[href=""]):focus-visible {
     outline:3px solid #83B3D3;;
     box-sizing: border-box;
     border-radius: 10px;
@@ -384,7 +381,7 @@ body{
 .page-header{
     min-height:65px;
 }
-.navigation-link:active {
+.navigation-link:not(.navigation-link[href=""]):active {
     color: rgba(0, 0, 0, 0.3);
 }
 .sedona-like{
@@ -395,11 +392,10 @@ body{
 }
 .mark-popover-close-button{
     position:absolute;
-    content:"";
     background:url("../images/svg/12-like-vector.png");
     width:19px;
     height:19px;
-    right:326px;
+    right:252px;
     top:14px;
 }
 .popover-close-button {
@@ -435,13 +431,19 @@ body{
     content:"";
     border-bottom:2px solid #756257;
     width:70px;
-    left:146px;
+    left:70px;
     top:64px;
     z-index:3
 }
 .navigation-link[href=""]{
     padding-left:6px;
     margin-left:6px;
+}
+.navigation-link[href=""]:hover{ 
+}
+.navigation-link[href=""]:focus{
+}
+ .navigation-link[href=""]:active{
 }
 .here-button {
     width:160px;
@@ -819,10 +821,6 @@ body{
     top: 550px;
     margin: 0;
     padding: 0;
-}
-.logo-sedona {
-    position:absolute;
-    margin:51px 371px 82px 371px;
 }
 .logo-block {
     margin: 0 auto;
@@ -1454,6 +1452,7 @@ body{
     position: absolute;
     top:140px;
     left:42px;
+    padding:4px 2px;
     font-family: "PT Sans",sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -1462,7 +1461,6 @@ body{
     color: #FFFFFF;
     background:none;   
     border:none; 
-    padding:0;
 }
 .button-repeat:hover{
     color: rgba(255, 255, 255, 0.6);
@@ -1470,7 +1468,6 @@ body{
 .button-repeat:focus-visible{
     outline:3px solid #83B3D3;
     border-radius: 4px;
-    padding:4px 3px;
 }
 .button-repeat:active{
     color: rgba(255, 255, 255, 0.3);
@@ -1607,7 +1604,7 @@ body{
 }
 .elected-button:not(.elected-button[href=""]):hover{
     background: #68A2CA;
-    border: 1px solid #756257;
+    outline: 1px solid #756257;
     border-radius: 4px;
 }
 .elected-button[href=""]:hover{
@@ -1806,13 +1803,16 @@ body{
     margin-right:8px;
     margin-left:71px;
 }
-.pagination-link:not(#gray-block):hover{
+.pagination-link[href=""]:hover{}
+.pagination-link[href=""]:focus{}
+.pagination-link[href=""]:active{}
+.pagination-link:not(.pagination-link[href=""]):hover{
     background: #68A2CA;
 }
-.pagination-link:not(#gray-block):focus-visible{
+.pagination-link:not(.pagination-link[href=""]):focus-visible{
     outline: 3px solid #756257;
 }
-.pagination-link:not(#gray-block):active{
+.pagination-link:not(.pagination-link[href=""]):active{
     color:rgba(255, 255, 255, 0.3)
 }
 .modal-container{
