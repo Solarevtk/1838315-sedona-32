@@ -313,27 +313,31 @@ body{
 }
 .navigation-list:first-child{
     margin-left:59px;
+    max-width:330px;
 }
 .navigation-list.navigation-user {
     width:auto;
     margin-left:auto;
-    max-width:350px;
+    max-width:430px;
+}
+.navigation-user .navigation-item:nth-child(3){
+    width:160px;
+    margin-right:72px;
 }
 .navigation-user .navigation-link[href="#"]{
-    right:45px;
-    padding:4px 7px 2px;
-    margin-top:24px;
+    padding:4px 4px 2px 4px;
+    margin-top:18px;
+    margin-left:53px;
 }
-.navigation-link[href="#"]:hover svg{
-    stroke:#756257;
+.navigation-user .navigation-link[href="#"]:hover svg{
+    fill:#756257;
 }
-.navigation-link[href="#"]:active svg{
+.navigation-user .navigation-link[href="#"]:active svg{
     opacity: 0.3;
 }
 .navigation-link {
-    position: relative;
     display:block;
-    margin:19px 33px 12px 0px;
+    margin:12px 0px 12px 0px;
     font-size:20px;
     line-height:26px;
     font-weight: 700;
@@ -346,14 +350,26 @@ body{
     bottom:6px;
 }
 .navigation-link[href="hotels.html"]{
-    right:48px;
-    bottom:6px;
+    margin-top:12px;
+}
+.catalog-body .navigation-link[href="hotels.html"]::after{
+    position: absolute;
+    content:"";
+    border-bottom:2px solid #756257;
+    width:93px;
+    left:362px;
+    top:64px;
 }
 .navigation-link[href="about-sedona.html"]{
-    right:24px;
+    margin:0;
+    margin-left:9px;
+    margin-top:12px;
 }
 .navigation-user  .navigation-link{
     padding:19px 20px 0px 0px;
+}
+.navigation-user .navigation-item:nth-child(2){
+    width:70px;
 }
 .navigation-link:hover {
     color:#756257;
@@ -371,13 +387,7 @@ body{
 .navigation-link:active {
     color: rgba(0, 0, 0, 0.3);
 }
-.navigation-user .navigation-item:nth-child(2){
-    position:relative;
-}
 .sedona-like{
-    position: relative;
-    top:-1px;
-    right:05px;
     width:18px;
     height:17px;
     fill:#000000;
@@ -389,17 +399,14 @@ body{
     background:url("../images/svg/12-like-vector.png");
     width:19px;
     height:19px;
-    right:93px;
-    bottom:32px;
+    right:326px;
+    top:14px;
 }
 .popover-close-button {
-    position:relative;
     outline:none;
     background:none;
     border:none;
-    margin:16px 15px 0px 0px;
-    right:72px;
-    top:0;
+    margin:16px 0px 0px 6px;
     cursor:pointer;
 }
 .popover-close-button:hover svg{
@@ -410,27 +417,33 @@ body{
     fill:rgba(117, 98, 87, 1);
     border-radius: 10px;
 }
+.popover-close-button:active svg{
+    fill:rgba(117, 98, 87, 0.3);
+}
 .navigation-list .navigation-item{
     height:65px;
+    width:110px;
 }
-.index-body .navigation-link[href="main-link.html"]::after{
+.navigation-item:first-child{
+    width:80px;
+}
+.navigation-list:nth-child(1) .navigation-item:nth-child(2){
+    width:139px;
+}
+.index-body .navigation-link[href=""]::after{
     position: absolute;
     content:"";
     border-bottom:2px solid #756257;
     width:70px;
-    left:12px;
-    top:50px;
+    left:146px;
+    top:64px;
+    z-index:3
 }
-.catalog-body .navigation-link[href="hotels.html"]::after{
-    position: absolute;
-    content:"";
-    border-bottom:2px solid #756257;
-    width:93px;
-    left:13px;
-    top:50px;
+.navigation-link[href=""]{
+    padding-left:6px;
+    margin-left:6px;
 }
 .here-button {
-    position:relative;
     width:160px;
     font-family: "PT Sans";
     font-style: normal;
@@ -445,8 +458,8 @@ body{
     padding:8px 0px;
     text-align:center;
     text-decoration: none;
-    right:72px;
-    top:14px;
+    margin-right:72px;
+    margin-top:14px;
     
 }
 .here-button:hover {
@@ -653,18 +666,9 @@ body{
 .catalog-filter-group:first-child .control-mark{
     left:2px;
 }
-/* .control-input::after{
-    position:absolute;
-    content:"";
-    background:red;
-    left:0px;
-    top:0px;
-    background: rgba(255, 255, 255, 0.6);
-    border: 3px solid #83B3D3;
-    border-radius: 4px;
-    width:50px;
-    height:10px;
-} */
+.control-input:focus + .control-mark{
+    outline:3px solid #83B3D3;
+}
 .control-input[type="checkbox"] + .control-mark:hover{
     opacity:0.6;
 }
@@ -1365,7 +1369,8 @@ body{
     position:absolute;
     padding:3px;
     left:0px;
-    top:0px;
+    top:10px;
+    line-height:0px;
 }
 .breadcrumbs-link svg{
     fill:rgba(255, 255, 255, 1);
