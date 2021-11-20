@@ -127,6 +127,7 @@ body{
     z-index:3;
 }
 .logo-sedona{ 
+    outline:none;
     left:531px;
     position:absolute;
     z-index:3;
@@ -134,7 +135,7 @@ body{
 .popover{
     position: absolute;
     top:62px;
-    right:-88px;
+    right:72px;
     z-index: 3;
     box-sizing: border-box;
     width: 400px;
@@ -148,7 +149,7 @@ body{
     color:#000000;
     background-color:#FFFFFF;
     /* Отключил поповер */
-    display:none;
+    display:none;   
 }
 .popover-cart::before{
     position:absolute;
@@ -220,6 +221,9 @@ body{
     outline: 3px solid #83B3D3;
     box-sizing: border-box;
     border-radius: 10px;
+}
+.cart-item-button{
+    outline: none;
 }
 .cart-item-button svg{
     position:relative;
@@ -326,10 +330,10 @@ body{
     margin-top:18px;
     margin-left:56px;
 }
-.navigation-user .navigation-link[href="#"]:hover svg{
+.navigation-link[href="#"]:hover svg{
     fill:#756257;
 }
-.navigation-user .navigation-link[href="#"]:active svg{
+.navigation-link[href="#"]:active svg{
     opacity: 0.3;
 }
 .navigation-link {
@@ -349,7 +353,7 @@ body{
 .navigation-link[href="hotels.html"]{
     margin-top:12px;
 }
-.catalog-body .navigation-link[href=""]::after{
+.catalog-body .navigation-link[href="##"]::after{
     position: absolute;
     content:"";
     border-bottom:2px solid #756257;
@@ -368,20 +372,22 @@ body{
 .navigation-user .navigation-item:nth-child(2){
     width:70px;
 }
-.navigation-link:not(.navigation-link[href=""]):hover {
+.navigation-link:not(.navigation-link[href="##"]):hover {
     color:#756257;
 }
-.navigation-link:not(.navigation-link[href=""]):focus-visible {
+.navigation-link:not(.navigation-link[href="##"]):focus-visible {
     outline:3px solid #83B3D3;;
     box-sizing: border-box;
     border-radius: 10px;
     align-self:center;
-    
 }
 .page-header{
     min-height:65px;
 }
-.navigation-link:not(.navigation-link[href=""]):active {
+.navigation-link[href="##"]{
+    outline:none;
+}
+.navigation-link:not(.navigation-link[href="##"]):active {
     color: rgba(0, 0, 0, 0.3);
 }
 .sedona-like{
@@ -408,6 +414,9 @@ body{
 .popover-close-button:hover svg{
     fill:rgba(117, 98, 87, 1);
 }
+.popover-close-button:hover + .popover{
+    display:block;
+}
 .popover-close-button:focus-visible svg{
     outline: 3px solid #83B3D3;
     fill:rgba(117, 98, 87, 1);
@@ -426,7 +435,7 @@ body{
 .navigation-list:nth-child(1) .navigation-item:nth-child(2){
     width:139px;
 }
-.index-body .navigation-link[href=""]::after{
+.index-body .navigation-link[href="##"]::after{
     position: absolute;
     content:"";
     border-bottom:2px solid #756257;
@@ -438,12 +447,6 @@ body{
 .navigation-link[href=""]{
     padding-left:6px;
     margin-left:6px;
-}
-.navigation-link[href=""]:hover{ 
-}
-.navigation-link[href=""]:focus{
-}
- .navigation-link[href=""]:active{
 }
 .here-button {
     width:160px;
@@ -547,8 +550,7 @@ body{
     padding: 0;
 }
 .catalog-form-inner{
-    background:url("../images/catalog/catalog-background.jpg");
-    background-repeat:none;
+    background:#000000 url("../images/catalog/catalog-background.jpg") no-repeat;
     width:1200px;
     margin:0 auto;
     min-height:408px;
@@ -958,12 +960,13 @@ body{
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
+    text-align: center;
     line-height: 26px;
     color:#333333;
-    text-align:center;
-    margin-left:-10px;
+    margin-left:240px;
     text-transform: none;
     margin-bottom:61px;
+    max-width:700px;
 }
 .sedona-hotels-block-h2 {
     font-family: "PT sans",sans-serif;
@@ -977,14 +980,20 @@ body{
     margin-bottom:30px;
 }
 .souvenirs-svg {
+    margin-left:170px;
+    width:63px;
     margin-bottom:23px;
     margin-top:85px;
 }
 .food-svg {
+    margin-left:163px;
+    width:75px;
     margin-bottom:23px;
     margin-top:91px;
 }
 .hotels-svg {
+    margin-left:163px;
+    width:75px;
     margin-bottom:23px;
     margin-top:89px;
 }
@@ -1031,7 +1040,6 @@ body{
     padding-bottom:15px;
 }
 .mailing-p {
-    margin:0 auto;
     font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight:normal;
@@ -1040,8 +1048,8 @@ body{
     text-transform: none;
     color:#FFFFFF;
     text-align: center;
-    margin-top:30px;
-    margin-bottom:28px;
+    margin-top:-6px;
+    margin-bottom:45px;
 }
 .mail-button {
     font-family: "PT sans",sans-serif;
@@ -1124,11 +1132,10 @@ body{
     align-self:center;
     margin: 0;
     padding: 0;
-    margin-left:72px;
+    margin-left:62px;
 }
 .footer-social-item{
-    position:relative;
-    margin-right:30px;
+    margin-right:20px;
 }
 .social-button:nth-child(1){
     width:18px;
@@ -1146,16 +1153,16 @@ body{
     border-radius: 10px;
 }
 .footer-social-item:nth-child(1){
-    top:2px;
-    right:10px;
+    margin-right:7px;
+    
 }
 .footer-social-item:nth-child(2){
-    right:34px;
-    top:1px;
+    margin-right:8px;
+    
 }
 .footer-social-item:nth-child(3) {
-    right:56px;
-    top:4px;
+    margin-right:0px;
+    
 }
 .social-button:focus-visible {
     outline:3px solid #83B3D3;;
@@ -1177,7 +1184,7 @@ body{
     margin:0 auto;
     align-self:center;
     bottom:2px;
-    right:65px;
+    right:59px;
 }
 .telefon:hover {
     color: #756257;
@@ -1376,7 +1383,7 @@ body{
 .breadcrumbs-link[href="index.html"]:hover svg{
     fill:rgba(255, 255, 255, 0.6)
 }
-.breadcrumbs-link[href=""] {
+.breadcrumbs-link[href="##"] {
     position:relative;
     font-family: "PT sans",sans-serif;
     font-style: normal;
@@ -1602,7 +1609,7 @@ body{
     align-self:end;
     margin-left:8px;
 }
-.elected-button:not(.elected-button[href=""]):hover{
+.elected-button:not(.elected-button[href="##"]):hover{
     background: #68A2CA;
     outline: 1px solid #756257;
     border-radius: 4px;
@@ -1610,7 +1617,7 @@ body{
 .elected-button[href=""]:hover{
     background: #6C9E42;
 }
-.elected-button:not(.elected-button[href=""]):focus-visible{
+.elected-button:not(.elected-button[href="##"]):focus-visible{
     outline:3px solid #756257;
     background: #68A2CA;
     border-radius: 4px;
@@ -1620,18 +1627,18 @@ body{
     background: #6C9E42;
     border-radius: 4px;
 }
-.elected-button:not(.elected-button[href=""]):active{
+.elected-button:not(.elected-button[href="##"]):active{
     background: #68A2CA;
     border: 1px solid #756257;
     box-sizing: border-box;
     border-radius: 4px;
     color:rgba(255, 255, 255, 0.3)
 }
-.elected-button[href=""]:focus-visible{
+.elected-button[href="##"]:focus-visible{
     background:#6C9E42;
     color:rgba(255, 255, 255, 0.3)
 }
-.elected-button[href=""]{
+.elected-button[href="##"]{
     background: #7DB54F;
 }
 .detailed-button{
@@ -1788,7 +1795,7 @@ body{
     padding-bottom:40px;
     margin-right:8px;
 }
-.pagination-link[href=""]{
+.pagination-link[href="##"]{
     font-family: "PT sans",sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -1803,16 +1810,13 @@ body{
     margin-right:8px;
     margin-left:71px;
 }
-.pagination-link[href=""]:hover{}
-.pagination-link[href=""]:focus{}
-.pagination-link[href=""]:active{}
-.pagination-link:not(.pagination-link[href=""]):hover{
+.pagination-link:not(.pagination-link[href="##"]):hover{
     background: #68A2CA;
 }
-.pagination-link:not(.pagination-link[href=""]):focus-visible{
+.pagination-link:not(.pagination-link[href="##"]):focus-visible{
     outline: 3px solid #756257;
 }
-.pagination-link:not(.pagination-link[href=""]):active{
+.pagination-link:not(.pagination-link[href="##"]):active{
     color:rgba(255, 255, 255, 0.3)
 }
 .modal-container{
@@ -2003,9 +2007,9 @@ body{
     color: #333333;
     top:40px;
     /* Отключил подсказки у неправильного ответа */
-    /* display:none; */
+    
 }
-#red-p{
+.field-group:nth-child(1) .modal-title-wrong-answer{
     color: #FF5757;
 }
 .number-of-people{
