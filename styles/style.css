@@ -132,6 +132,10 @@ body{
     position:absolute;
     z-index:3;
 }
+.logo-sedona-img{
+    width:138px;
+    height:70px;
+}
 .popover{
     position: absolute;
     top:62px;
@@ -325,6 +329,13 @@ body{
     width:160px;
     margin-right:72px;
 }
+.catalog-body .navigation-link[href="index.html"]{
+    padding-right:16px;
+}
+.navigation-link[href="catalog.html"],
+.catalog-body .navigation-link[href="##"]{
+    padding-left:10px;
+}
 .navigation-user .navigation-link[href="#"]{
     padding:4px 4px 2px 4px;
     margin-top:18px;
@@ -414,7 +425,7 @@ body{
 .popover-close-button:hover svg{
     fill:rgba(117, 98, 87, 1);
 }
-.popover-close-button:hover + .popover{
+.popover-close-button:hover ~ .popover{
     display:block;
 }
 .popover-close-button:focus-visible svg{
@@ -430,10 +441,10 @@ body{
     width:110px;
 }
 .navigation-item:first-child{
-    width:80px;
+    width:87px;
 }
 .navigation-list:nth-child(1) .navigation-item:nth-child(2){
-    width:139px;
+    width:133px;
 }
 .index-body .navigation-link[href="##"]::after{
     position: absolute;
@@ -479,7 +490,7 @@ body{
     background-color:#615048;
 }
 .mailing-index {
-    background-image: url("../images/index/mailing-background.jpg");
+    background-image:#91abb7 url("../images/index/mailing-background.jpg");
     height:411px;
     width: 1200px;
     background-size: 100% auto;
@@ -550,7 +561,7 @@ body{
     padding: 0;
 }
 .catalog-form-inner{
-    background:#000000 url("../images/catalog/catalog-background.jpg") no-repeat;
+    background:#6e6d72 url("../images/catalog/catalog-background.jpg") no-repeat;
     width:1200px;
     margin:0 auto;
     min-height:408px;
@@ -792,6 +803,9 @@ body{
 }
 .mode-title:not(.mode-title-black):active{
     border: 2px solid #000000   ;
+}
+.mode-title-black{
+    outline:none;
 }
 .sorting-image{
     width:16px;
@@ -1340,6 +1354,11 @@ body{
     height: 384px;
     margin:0;
 }
+.photo-mountain {
+    width: 800px;
+    height: 384px;
+}
+
 .main-page-block{
     display:flex;
     padding:0;
@@ -1660,7 +1679,7 @@ body{
     display:block;
 }
 .detailed-button:hover{
-    color: #615048;
+    background: #615048;
 }
 .detailed-button:focus-visible{
     outline:3px solid #83B3D3;
@@ -1705,6 +1724,10 @@ body{
 .product-card-information-block{
     position: relative;
     grid-column:3/5;
+}
+.product-card-image{
+    width:180px;
+    height:120px;
 }
 .product-card-title {
     position: relative;
@@ -1809,6 +1832,7 @@ body{
     border-radius: 4px;
     margin-right:8px;
     margin-left:71px;
+    outline:none;
 }
 .pagination-link:not(.pagination-link[href="##"]):hover{
     background: #68A2CA;
